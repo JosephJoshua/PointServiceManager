@@ -22,10 +22,19 @@ namespace PSMDesktopUI.Views
             }
         }
 
+        private void SetGridWidth()
+        {
+            double lcWidth = MainLayoutControl.ActualWidth;
+
+            GridLayoutGroup.Width = lcWidth * 0.7d;
+        }
+
         private void View_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
             ServicesViewModel vm = (ServicesViewModel)DataContext;
             vm.OnRefresh += OnRefresh;
+
+            SetGridWidth();
         }
     }
 }

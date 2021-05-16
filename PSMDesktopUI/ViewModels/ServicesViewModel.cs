@@ -9,6 +9,7 @@ using System.Linq;
 using System.Windows.Input;
 using System.Globalization;
 using DevExpress.Xpf.Grid;
+using System;
 
 namespace PSMDesktopUI.ViewModels
 {
@@ -32,6 +33,9 @@ namespace PSMDesktopUI.ViewModels
         private string _searchText;
         private SearchType _searchTypes;
         private SearchType _selectedSearchType;
+
+        private DateTime _startDate;
+        private DateTime _endDate;
 
         public delegate void OnRefreshEventHandler();
         public event OnRefreshEventHandler OnRefresh;
@@ -147,6 +151,28 @@ namespace PSMDesktopUI.ViewModels
             {
                 _selectedSearchType = value;
                 NotifyOfPropertyChange(() => SelectedSearchType);
+            }
+        }
+
+        public DateTime StartDate
+        {
+            get => _startDate;
+
+            set
+            {
+                _startDate = value;
+                NotifyOfPropertyChange(() => StartDate);
+            }
+        }
+        
+        public DateTime EndDate
+        {
+            get => _endDate;
+
+            set
+            {
+                _endDate = value;
+                NotifyOfPropertyChange(() => EndDate);
             }
         }
 
