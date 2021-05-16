@@ -340,7 +340,7 @@ namespace PSMDesktopUI.ViewModels
                         break;
 
                     case SearchType.Status:
-                        serviceList = serviceList.Where(s => s.StatusServisan.ToString().ToLower().Contains(searchText)).ToList();
+                        serviceList = serviceList.Where(s => s.StatusServisan.ToLower().Contains(searchText)).ToList();
                         break;
                 }
             }
