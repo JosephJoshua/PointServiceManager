@@ -94,16 +94,18 @@
                           MaskType="DateTime"
                           Mask="dd/MM/yyyy"
                           MaskUseAsDisplayFormat="True"
-                          DateTime="{Binding StartDate}" />
+                          DateTime="{Binding EndDate}" />
         </Grid>
 
-        <!-- Data grid -->
         <dxlc:LayoutControl x:Name="MainLayoutControl" Grid.Column="0" Grid.Row="2"
                             Grid.ColumnSpan="2"
                             Orientation="Horizontal">
-            <dxlc:LayoutGroup x:Name="GridLayoutGroup" dxlc:LayoutControl.AllowHorizontalSizing="True" UseLayoutRounding="True" Orientation="Horizontal">
+            <dxlc:LayoutGroup x:Name="GridLayoutGroup" dxlc:LayoutControl.AllowHorizontalSizing="True"
+                              UseLayoutRounding="True" Orientation="Horizontal">
                 <Grid>
-                    <dxg:GridControl x:Name="ServicesGrid" Grid.Column="0" Grid.Row="0"
+                    
+                    <!-- Data grid -->
+                    <dxg:GridControl x:Name="ServicesGrid"
                                      Margin="0 10 0 0"
                                      SelectionMode="Row"
                                      CurrentItem="{Binding Path=SelectedService, Mode=OneWayToSource}"
@@ -196,71 +198,70 @@
 
                     <!-- Floating action buttons -->
                     <material:PopupBox Style="{StaticResource MaterialDesignMultiFloatingActionPopupBox}"
-                           Grid.Column="0" Grid.Row="0"
-                           HorizontalAlignment="Right"
-                           VerticalAlignment="Bottom"
-                           Margin="32">
+                                       HorizontalAlignment="Right"
+                                       VerticalAlignment="Bottom"
+                                       Margin="32">
 
                         <StackPanel>
                             <Button ToolTip="Add"
-                        Background="{DynamicResource PrimaryHueMidBrush}"
-                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
-                        IsEnabled="{Binding Path=CanAddService}"
-                        cal:Message.Attach="[Event Click] = [Action AddService]">
+                                    Background="{DynamicResource PrimaryHueMidBrush}"
+                                    Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                                    IsEnabled="{Binding Path=CanAddService}"
+                                    cal:Message.Attach="[Event Click] = [Action AddService]">
                                 <material:PackIcon Kind="Add" />
                             </Button>
 
                             <Button ToolTip="Add Sparepart"
-                        Background="{DynamicResource PrimaryHueMidBrush}"
-                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
-                        IsEnabled="{Binding Path=CanAddSparepart}"
-                        cal:Message.Attach="[Event Click] = [Action AddSparepart]">
+                                    Background="{DynamicResource PrimaryHueMidBrush}"
+                                    Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                                    IsEnabled="{Binding Path=CanAddSparepart}"
+                                    cal:Message.Attach="[Event Click] = [Action AddSparepart]">
                                 <material:PackIcon Kind="AddShoppingCart" />
                             </Button>
 
                             <Button ToolTip="Edit"
-                        Background="{DynamicResource PrimaryHueMidBrush}"
-                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
-                        IsEnabled="{Binding Path=CanEditService}"
-                        cal:Message.Attach="[Event Click] = [Action EditService]">
+                                    Background="{DynamicResource PrimaryHueMidBrush}"
+                                    Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                                    IsEnabled="{Binding Path=CanEditService}"
+                                    cal:Message.Attach="[Event Click] = [Action EditService]">
                                 <material:PackIcon Kind="Edit" />
                             </Button>
 
                             <Button ToolTip="Edit Status"
-                        Background="{DynamicResource PrimaryHueMidBrush}"
-                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
-                        IsEnabled="{Binding Path=CanEditService}"
-                        cal:Message.Attach="[Event Click] = [Action EditStatus]">
+                                    Background="{DynamicResource PrimaryHueMidBrush}"
+                                    Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                                    IsEnabled="{Binding Path=CanEditService}"
+                                    cal:Message.Attach="[Event Click] = [Action EditStatus]">
                                 <material:PackIcon Kind="Check" />
                             </Button>
 
                             <Button ToolTip="Delete"
-                        Background="{DynamicResource PrimaryHueMidBrush}"
-                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
-                        IsEnabled="{Binding Path=CanDeleteService}"
-                        cal:Message.Attach="[Event Click] = [Action DeleteService]">
+                                    Background="{DynamicResource PrimaryHueMidBrush}"
+                                    Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                                    IsEnabled="{Binding Path=CanDeleteService}"
+                                    cal:Message.Attach="[Event Click] = [Action DeleteService]">
                                 <material:PackIcon Kind="Delete" />
                             </Button>
 
                             <Button ToolTip="Delete Sparepart"
-                        Background="{DynamicResource PrimaryHueMidBrush}"
-                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
-                        IsEnabled="{Binding Path=CanDeleteSparepart}"
-                        cal:Message.Attach="[Event Click] = [Action DeleteSparepart]">
+                                    Background="{DynamicResource PrimaryHueMidBrush}"
+                                    Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                                    IsEnabled="{Binding Path=CanDeleteSparepart}"
+                                    cal:Message.Attach="[Event Click] = [Action DeleteSparepart]">
                                 <material:PackIcon Kind="RemoveShoppingCart" />
                             </Button>
 
                             <Button ToolTip="Refresh"
-                        Background="{DynamicResource PrimaryHueMidBrush}"
-                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
-                        cal:Message.Attach="[Event Click] = [Action LoadServices]">
+                                    Background="{DynamicResource PrimaryHueMidBrush}"
+                                    Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                                    cal:Message.Attach="[Event Click] = [Action LoadServices]">
                                 <material:PackIcon Kind="Refresh" />
                             </Button>
 
                             <Button ToolTip="Print"
-                        Background="{DynamicResource PrimaryHueMidBrush}"
-                        Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
-                        cal:Message.Attach="[Event Click] = [Action PrintService]">
+                                    Background="{DynamicResource PrimaryHueMidBrush}"
+                                    Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
+                                    cal:Message.Attach="[Event Click] = [Action PrintService]">
                                 <material:PackIcon Kind="Printer" />
                             </Button>
                         </StackPanel>
@@ -268,7 +269,6 @@
 
                     <!-- Progress bar -->
                     <ProgressBar Style="{StaticResource MaterialDesignCircularProgressBar}"
-                                 Grid.Column="0" Grid.Row="0"
                                  Width="40"
                                  Height="40"
                                  HorizontalAlignment="Center"
@@ -276,48 +276,50 @@
                                  Value="0"
                                  IsIndeterminate="True"
                                  Visibility="{c:Binding Path=IsLoading}" />
+                </Grid>
+            </dxlc:LayoutGroup>
 
-                    <TextBlock Grid.Column="0" Grid.Row="0"
-                               Visibility="{c:Binding Path=!ShowInfo}"
+            <dxlc:LayoutGroup Orientation="Horizontal">
+                <Grid>
+                    
+                    <!-- Info box -->
+                    <StackPanel Orientation="Vertical"
+                            Margin="10 10 0 0"
+                            Visibility="{c:Binding Path=ShowInfo, FalseToVisibility=Hidden}">
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.NomorNota, StringFormat=No. Nota: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Tanggal, StringFormat=Tanggal: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.NamaPelanggan, StringFormat=Nama Pelanggan: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.NoHp, StringFormat=No Hp: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TipeHp, StringFormat=Tipe Hp: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Imei, StringFormat=Imei: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Kerusakan, StringFormat=Kerusakan: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.KondisiHp, StringFormat=Kondisi Hp: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.YangBelumDicek, StringFormat=Yang Belum Dicek: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Kelengkapan, StringFormat=Kelengkapan: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Warna, StringFormat=Warna: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.KataSandiPola, StringFormat=Kata Sandi/Pola: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedServiceTechnician, StringFormat=Teknisi: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedServiceSales, StringFormat=Sales: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.StatusServisan, StringFormat=Status Servisan: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TanggalKonfirmasi, StringFormat=Tanggal Konfirmasi: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.IsiKonfirmasi, StringFormat=Isi Konfirmasi: {0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Biaya, StringFormat=Biaya: Rp{0:N0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Discount, StringFormat=Discount: {0}%}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Dp, StringFormat=Dp: Rp{0:N0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TambahanBiaya, StringFormat=TambahanBiaya: Rp{0:N0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TotalBiaya, StringFormat=Total Biaya: Rp{0:N0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.HargaSparepart, StringFormat=Harga Sparepart: Rp{0:N0}}" Visibility="{c:Binding Path=!IsCustomerService}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Sisa, StringFormat=Sisa: Rp{0:N0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.LabaRugi, StringFormat=Laba/Rugi: Rp{0:N0}}" Visibility="{c:Binding Path=IsAdmin, FalseToVisibility=Collapsed}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TanggalPengambilan, StringFormat=Tanggal Pengambilan: {0}}" />
+                    </StackPanel>
+
+                    <TextBlock Visibility="{c:Binding Path=!ShowInfo}"
                                FontSize="18"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
                                Text="No service selected" />
                 </Grid>
-            </dxlc:LayoutGroup>
-
-            <!-- Info box -->
-            <dxlc:LayoutGroup Orientation="Horizontal">
-                <StackPanel Orientation="Vertical"
-                            Margin="10 10 0 0"
-                            Visibility="{c:Binding Path=ShowInfo, FalseToVisibility=Hidden}">
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.NomorNota, StringFormat=No. Nota: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Tanggal, StringFormat=Tanggal: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.NamaPelanggan, StringFormat=Nama Pelanggan: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.NoHp, StringFormat=No Hp: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TipeHp, StringFormat=Tipe Hp: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Imei, StringFormat=Imei: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Kerusakan, StringFormat=Kerusakan: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.KondisiHp, StringFormat=Kondisi Hp: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.YangBelumDicek, StringFormat=Yang Belum Dicek: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Kelengkapan, StringFormat=Kelengkapan: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Warna, StringFormat=Warna: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.KataSandiPola, StringFormat=Kata Sandi/Pola: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedServiceTechnician, StringFormat=Teknisi: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedServiceSales, StringFormat=Sales: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.StatusServisan, StringFormat=Status Servisan: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TanggalKonfirmasi, StringFormat=Tanggal Konfirmasi: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.IsiKonfirmasi, StringFormat=Isi Konfirmasi: {0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Biaya, StringFormat=Biaya: Rp{0:N0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Discount, StringFormat=Discount: {0}%}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Dp, StringFormat=Dp: Rp{0:N0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TambahanBiaya, StringFormat=TambahanBiaya: Rp{0:N0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TotalBiaya, StringFormat=Total Biaya: Rp{0:N0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.HargaSparepart, StringFormat=Harga Sparepart: Rp{0:N0}}" Visibility="{c:Binding Path=!IsCustomerService}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Sisa, StringFormat=Sisa: Rp{0:N0}}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.LabaRugi, StringFormat=Laba/Rugi: Rp{0:N0}}" Visibility="{c:Binding Path=IsAdmin, FalseToVisibility=Collapsed}" />
-                    <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TanggalPengambilan, StringFormat=Tanggal Pengambilan: {0}}" />
-                </StackPanel>
             </dxlc:LayoutGroup>
         </dxlc:LayoutControl>
     </Grid>

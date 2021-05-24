@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="ASCII"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_8k5uoLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_8k5uobq3EeuE7ZD2-BPYdg" bindingContexts="_8k6Wsbq3EeuE7ZD2-BPYdg">
+  <tags>activeSchemeId:com.businessobjects.crystalreports.customAcceleratorConfiguration</tags>
+  <tags>ModelMigrationProcessor.001</tags>
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_8k5uobq3EeuE7ZD2-BPYdg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_8k5uorq3EeuE7ZD2-BPYdg" x="10" y="10" width="640" height="480">
+    <persistedState key="coolBarVisible" value="true"/>
+    <persistedState key="perspectiveBarVisible" value="false"/>
+    <persistedState key="isRestored" value="true"/>
+    <tags>topLevel</tags>
+    <children xsi:type="basic:PartSashContainer" xmi:id="_8k5uorq3EeuE7ZD2-BPYdg" selectedElement="_8k5uo7q3EeuE7ZD2-BPYdg" horizontal="true">
+      <children xsi:type="advanced:PerspectiveStack" xmi:id="_8k5uo7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_8k5upLq3EeuE7ZD2-BPYdg">
+        <children xsi:type="advanced:Perspective" xmi:id="_8k5upLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.report.perspective" selectedElement="_8k5upbq3EeuE7ZD2-BPYdg" label="Viewer Shell Perspective" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/default_persp.png">
+          <persistedState key="persp.hiddenItems" value="persp.hideToolbarSC:print,persp.hideToolbarSC:org.eclipse.ui.edit.undo,persp.hideToolbarSC:org.eclipse.ui.edit.redo,"/>
+          <tags>persp.actionSet:com.businessobjects.bimodeler.connection.publishconnection</tags>
+          <tags>persp.actionSet:com.businessobjects.bimodeler.shared.tb.contrib</tags>
+          <tags>persp.actionSet:org.eclipse.ui.actionSet.keyBindings</tags>
+          <tags>persp.actionSet:org.eclipse.ui.actionSet.openFiles</tags>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_8k5upbq3EeuE7ZD2-BPYdg" selectedElement="_8k5up7q3EeuE7ZD2-BPYdg" horizontal="true">
+            <children xsi:type="advanced:Placeholder" xmi:id="_8k5uprq3EeuE7ZD2-BPYdg" elementId="com.bobj.crystalreports.designer.ViewerEditorView" containerData="200" ref="_8k6WA7q3EeuE7ZD2-BPYdg" closeable="true">
+              <tags>View</tags>
+              <tags>categoryTag:Other</tags>
+              <tags>Standalone</tags>
+            </children>
+            <children xsi:type="basic:PartSashContainer" xmi:id="_8k5up7q3EeuE7ZD2-BPYdg" containerData="9800" selectedElement="_8k5uqLq3EeuE7ZD2-BPYdg" horizontal="true">
+              <children xsi:type="basic:PartStack" xmi:id="_8k5uqLq3EeuE7ZD2-BPYdg" elementId="left" containerData="2300" selectedElement="_8k5uqbq3EeuE7ZD2-BPYdg">
+                <tags>active</tags>
+                <tags>noFocus</tags>
+                <children xsi:type="advanced:Placeholder" xmi:id="_8k5uqbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.communitypanel" ref="_8k6WBrq3EeuE7ZD2-BPYdg" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:Other</tags>
+                </children>
+                <children xsi:type="advanced:Placeholder" xmi:id="_8k5uqrq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.grouptree" toBeRendered="false" ref="_8k6WCbq3EeuE7ZD2-BPYdg" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:Other</tags>
+                </children>
+                <children xsi:type="advanced:Placeholder" xmi:id="_8k5uq7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.promptpanel" toBeRendered="false" ref="_8k6WCrq3EeuE7ZD2-BPYdg" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:Other</tags>
+                </children>
+                <children xsi:type="advanced:Placeholder" xmi:id="_8k5urLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.viewer.searchpanel" toBeRendered="false" ref="_8k6WC7q3EeuE7ZD2-BPYdg" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:Other</tags>
+                </children>
+              </children>
+              <children xsi:type="advanced:Placeholder" xmi:id="_8k5urbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.editorss" containerData="7700" ref="_8k6V_rq3EeuE7ZD2-BPYdg"/>
+            </children>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="basic:PartStack" xmi:id="_8k5urrq3EeuE7ZD2-BPYdg" elementId="stickyFolderRight" toBeRendered="false" containerData="2500">
+        <children xsi:type="advanced:Placeholder" xmi:id="_8k5ur7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.help.ui.HelpView" toBeRendered="false" ref="_8k6V_Lq3EeuE7ZD2-BPYdg" closeable="true">
+          <tags>View</tags>
+          <tags>categoryTag:Help</tags>
+        </children>
+        <children xsi:type="advanced:Placeholder" xmi:id="_8k6VsLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.internal.introview" toBeRendered="false" ref="_8k6V_bq3EeuE7ZD2-BPYdg" closeable="true">
+          <tags>View</tags>
+          <tags>categoryTag:General</tags>
+        </children>
+      </children>
+    </children>
+    <sharedElements xsi:type="basic:Part" xmi:id="_8k6V_Lq3EeuE7ZD2-BPYdg" elementId="org.eclipse.help.ui.HelpView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Help" iconURI="platform:/plugin/org.eclipse.help.ui/icons/view16/help_view.gif" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="org.eclipse.help.ui.internal.views.HelpView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.help.ui"/>
+      <tags>View</tags>
+      <tags>categoryTag:Help</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_8k6V_bq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.internal.introview" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Welcome" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.ViewIntroAdapterPart"/>
+      <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui"/>
+      <tags>View</tags>
+      <tags>categoryTag:General</tags>
+    </sharedElements>
+    <sharedElements xsi:type="advanced:Area" xmi:id="_8k6V_rq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.editorss" selectedElement="_8k6V_7q3EeuE7ZD2-BPYdg">
+      <children xsi:type="basic:PartStack" xmi:id="_8k6V_7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.e4.primaryDataStack">
+        <tags>org.eclipse.e4.primaryDataStack</tags>
+        <tags>EditorStack</tags>
+      </children>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_8k6WALq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.startingpage.ui.StartingPageView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Crystal Report Start Page" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="com.businessobjects.crystalreports.viewershellext.Win32ViewerStartingPageView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="com.businessobjects.crystalreports.viewershellext.win32"/>
+      <tags>View</tags>
+      <tags>categoryTag:Other</tags>
+      <menus xmi:id="_8k6WAbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.startingpage.ui.StartingPageView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_8k6WArq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.startingpage.ui.StartingPageView"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_8k6WA7q3EeuE7ZD2-BPYdg" elementId="com.bobj.crystalreports.designer.ViewerEditorView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="ViewerEditorView" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="com.bobj.crystalreports.viewer.ViewerEditorView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="com.businessobjects.crystalreports.viewer.shell"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
+      <tags>View</tags>
+      <tags>categoryTag:Other</tags>
+      <menus xmi:id="_8k6WBLq3EeuE7ZD2-BPYdg" elementId="com.bobj.crystalreports.designer.ViewerEditorView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_8k6WBbq3EeuE7ZD2-BPYdg" elementId="com.bobj.crystalreports.designer.ViewerEditorView"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_8k6WBrq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.communitypanel" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Community" iconURI="platform:/plugin/com.businessobjects.crystalreports.viewer.shell/icons/community_16x16.gif" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="com.bobj.crystalreports.viewer.views.CommunityView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="com.businessobjects.crystalreports.viewer.shell"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
+      <tags>View</tags>
+      <tags>categoryTag:Other</tags>
+      <tags>active</tags>
+      <menus xmi:id="_8k6WB7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.communitypanel">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_8k6WCLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.communitypanel"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_8k6WCbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.grouptree" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Group Tree" iconURI="platform:/plugin/com.businessobjects.crystalreports.designer.grouptree/icons/group_tree_16x16.gif" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="com.businessobjects.crystalreports.designer.grouptree.GroupTreeView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="com.businessobjects.crystalreports.designer.grouptree"/>
+      <tags>View</tags>
+      <tags>categoryTag:Other</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_8k6WCrq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.promptpanel" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Prompts" iconURI="platform:/plugin/com.businessobjects.crystalreports.designer.promptingui/icons/prompt_panel_16x16.gif" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="com.businessobjects.crystalreports.promptingui.panel.PromptingPanelView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="com.businessobjects.crystalreports.designer.promptingui"/>
+      <tags>View</tags>
+      <tags>categoryTag:Other</tags>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_8k6WC7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.viewer.searchpanel" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Find" iconURI="platform:/plugin/com.businessobjects.crystalreports.designer.searchpanel/icons/search_16x16.gif" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewClass" value="com.businessobjects.crystalreports.designer.search.SearchView"/>
+      <persistedState key="originalCompatibilityViewBundle" value="com.businessobjects.crystalreports.designer.searchpanel"/>
+      <tags>View</tags>
+      <tags>categoryTag:Other</tags>
+    </sharedElements>
+    <trimBars xmi:id="_8k6WDLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.main.toolbar" contributorURI="platform:/plugin/org.eclipse.ui.workbench" visible="false">
+      <children xsi:type="menu:ToolBar" xmi:id="_8k6WDbq3EeuE7ZD2-BPYdg" elementId="additions" toBeRendered="false">
+        <tags>toolbarSeparator</tags>
+        <children xsi:type="menu:ToolBarSeparator" xmi:id="_8k6WDrq3EeuE7ZD2-BPYdg" elementId="additions" toBeRendered="false"/>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_8k6WD7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.bimodeler.shared.tb.contrib">
+        <tags>Draggable</tags>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_8k6WELq3EeuE7ZD2-BPYdg" elementId="groupDatafoundation">
+          <tags>Opaque</tags>
+        </children>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_8k6WEbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.bimodeler.shared.checkintegrity.CheckIntegrityAction">
+          <tags>Opaque</tags>
+        </children>
+        <children xsi:type="menu:DirectToolItem" xmi:id="_8k6WErq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.bimodeler.framework.actions.ShowHideSearchAction">
+          <tags>Opaque</tags>
+        </children>
+      </children>
+      <children xsi:type="menu:ToolBar" xmi:id="_8k6WE7q3EeuE7ZD2-BPYdg" elementId="group.editor" toBeRendered="false">
+        <tags>toolbarSeparator</tags>
+        <children xsi:type="menu:ToolBarSeparator" xmi:id="_8k6WFLq3EeuE7ZD2-BPYdg" elementId="group.editor" toBeRendered="false"/>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_8k6WFbq3EeuE7ZD2-BPYdg" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+        <tags>stretch</tags>
+        <tags>SHOW_RESTORE_MENU</tags>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_8k6WFrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.trim.status" contributorURI="platform:/plugin/org.eclipse.ui.workbench" toBeRendered="false" side="Bottom">
+      <children xsi:type="menu:ToolControl" xmi:id="_8k6WF7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.StatusLine" toBeRendered="false" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.StandardTrim">
+        <tags>stretch</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_8k6WGLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.HeapStatus" toBeRendered="false" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.StandardTrim">
+        <tags>Draggable</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_8k6WGbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ProgressBar" toBeRendered="false" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.StandardTrim">
+        <tags>Draggable</tags>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_8k6WGrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.trim.vertical1" contributorURI="platform:/plugin/org.eclipse.ui.workbench" side="Left"/>
+    <trimBars xmi:id="_8k6WG7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.trim.vertical2" contributorURI="platform:/plugin/org.eclipse.ui.workbench" side="Right"/>
+  </children>
+  <bindingTables xmi:id="_8k6WHLq3EeuE7ZD2-BPYdg" contributorURI="platform:/plugin/org.eclipse.ui.workbench" bindingContext="_8k6Wsbq3EeuE7ZD2-BPYdg">
+    <bindings xmi:id="_8k6WHbq3EeuE7ZD2-BPYdg" keySequence="CTRL+A" command="_8k6-Qrq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WHrq3EeuE7ZD2-BPYdg" keySequence="CTRL+C" command="_8k69r7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WH7q3EeuE7ZD2-BPYdg" keySequence="ALT+F11" command="_8k6-LLq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <tags>platform:win32</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WILq3EeuE7ZD2-BPYdg" keySequence="CTRL+1" command="_8k6-g7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WIbq3EeuE7ZD2-BPYdg" keySequence="SHIFT+INSERT" command="_8k696rq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WIrq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+L" command="_8k6-Irq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WI7q3EeuE7ZD2-BPYdg" keySequence="CTRL+X" command="_8k6957q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WJLq3EeuE7ZD2-BPYdg" keySequence="CTRL+Y" command="_8k6-a7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WJbq3EeuE7ZD2-BPYdg" keySequence="CTRL+Z" command="_8k692rq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WJrq3EeuE7ZD2-BPYdg" keySequence="SHIFT+DEL" command="_8k6957q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WJ7q3EeuE7ZD2-BPYdg" keySequence="ALT+PAGE_UP" command="_8k6-ebq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WKLq3EeuE7ZD2-BPYdg" keySequence="CTRL+V" command="_8k696rq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WKbq3EeuE7ZD2-BPYdg" keySequence="ALT+PAGE_DOWN" command="_8k6-Ubq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WKrq3EeuE7ZD2-BPYdg" keySequence="CTRL+INSERT" command="_8k69r7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WK7q3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+SPACE" command="_8k69srq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WLLq3EeuE7ZD2-BPYdg" keySequence="CTRL+PAGE_UP" command="_8k6-Dbq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WLbq3EeuE7ZD2-BPYdg" keySequence="CTRL+PAGE_DOWN" command="_8k69nrq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WLrq3EeuE7ZD2-BPYdg" keySequence="ALT+SHIFT+F3" command="_8k69_rq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WL7q3EeuE7ZD2-BPYdg" keySequence="CTRL+SPACE" command="_8k69w7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WMLq3EeuE7ZD2-BPYdg" keySequence="CTRL+F10" command="_8k6-Crq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+  </bindingTables>
+  <bindingTables xmi:id="_8k6WMbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.crystalReportsDesignerNotInTextScope" bindingContext="_8k6WuLq3EeuE7ZD2-BPYdg">
+    <bindings xmi:id="_8k6WMrq3EeuE7ZD2-BPYdg" keySequence="END" command="_8k6-GLq3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WM7q3EeuE7ZD2-BPYdg" keySequence="HOME" command="_8k6-drq3EeuE7ZD2-BPYdg"/>
+  </bindingTables>
+  <bindingTables xmi:id="_8k6WNLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.contexts.window" bindingContext="_8k6Wsrq3EeuE7ZD2-BPYdg">
+    <bindings xmi:id="_8k6WNbq3EeuE7ZD2-BPYdg" keySequence="F1" command="_8k6-WLq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WNrq3EeuE7ZD2-BPYdg" keySequence="F2" command="_8k698rq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WN7q3EeuE7ZD2-BPYdg" keySequence="CTRL+M" command="_8k69vrq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WOLq3EeuE7ZD2-BPYdg" keySequence="F5" command="_8k6-Drq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WObq3EeuE7ZD2-BPYdg" keySequence="CTRL+O" command="_8k6-c7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WOrq3EeuE7ZD2-BPYdg" keySequence="ALT+F7" command="_8k6967q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WO7q3EeuE7ZD2-BPYdg" keySequence="CTRL+B" command="_8k6987q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WPLq3EeuE7ZD2-BPYdg" keySequence="CTRL+E" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WPbq3EeuE7ZD2-BPYdg" keySequence="CTRL+E" command="_8k691bq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WPrq3EeuE7ZD2-BPYdg" keySequence="CTRL+F" command="_8k6-KLq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WP7q3EeuE7ZD2-BPYdg" keySequence="CTRL+=" command="_8k6-Brq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WQLq3EeuE7ZD2-BPYdg" keySequence="ALT+-" command="_8k69x7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WQbq3EeuE7ZD2-BPYdg" keySequence="ALT+SHIFT+N" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WQrq3EeuE7ZD2-BPYdg" keySequence="ALT+SHIFT+N" command="_8k694rq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WQ7q3EeuE7ZD2-BPYdg" keySequence="DEL" command="_8k6-Mbq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WRLq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+R" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WRbq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+R" command="_8k6-ibq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WRrq3EeuE7ZD2-BPYdg" keySequence="CTRL+3" command="_8k69n7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WR7q3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+S" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WSLq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+S" command="_8k6-Ibq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WSbq3EeuE7ZD2-BPYdg" keySequence="ALT+SHIFT+Q C" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WSrq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+W" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WS7q3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+W" command="_8k695bq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WTLq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+L" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WTbq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+E" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WTrq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+E" command="_8k6-T7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WT7q3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+F" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WULq3EeuE7ZD2-BPYdg" keySequence="ALT+SHIFT+W" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WUbq3EeuE7ZD2-BPYdg" keySequence="ALT+SHIFT+W" command="_8k6-Xrq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WUrq3EeuE7ZD2-BPYdg" keySequence="ALT+CR" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WU7q3EeuE7ZD2-BPYdg" keySequence="ALT+CR" command="_8k69qLq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WVLq3EeuE7ZD2-BPYdg" keySequence="CTRL+_" command="_8k69uLq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <parameters xmi:id="_8k6WVbq3EeuE7ZD2-BPYdg" elementId="Splitter.isHorizontal" name="Splitter.isHorizontal" value="true"/>
+    </bindings>
+    <bindings xmi:id="_8k6WVrq3EeuE7ZD2-BPYdg" keySequence="CTRL+P" command="_8k69-Lq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WV7q3EeuE7ZD2-BPYdg" keySequence="CTRL+Q" command="_8k6997q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WWLq3EeuE7ZD2-BPYdg" keySequence="CTRL+S" command="_8k6-Jbq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WWbq3EeuE7ZD2-BPYdg" keySequence="ALT+ARROW_LEFT" command="_8k6-DLq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WWrq3EeuE7ZD2-BPYdg" keySequence="CTRL+T" command="_8k69sbq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WW7q3EeuE7ZD2-BPYdg" keySequence="ALT+ARROW_RIGHT" command="_8k69_bq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WXLq3EeuE7ZD2-BPYdg" keySequence="F12" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WXbq3EeuE7ZD2-BPYdg" keySequence="F12" command="_8k69xbq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WXrq3EeuE7ZD2-BPYdg" keySequence="CTRL+W" command="_8k6-dbq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WX7q3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+NUMPAD_MULTIPLY" command="_8k6-ILq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WYLq3EeuE7ZD2-BPYdg" keySequence="CTRL+F4" command="_8k6-dbq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WYbq3EeuE7ZD2-BPYdg" keySequence="CTRL+F6" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WYrq3EeuE7ZD2-BPYdg" keySequence="CTRL+F6" command="_8k6-Lbq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WY7q3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+NUMPAD_DIVIDE" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WZLq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+NUMPAD_DIVIDE" command="_8k69urq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WZbq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+SPACE" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WZrq3EeuE7ZD2-BPYdg" keySequence="CTRL+{" command="_8k69uLq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <parameters xmi:id="_8k6WZ7q3EeuE7ZD2-BPYdg" elementId="Splitter.isHorizontal" name="Splitter.isHorizontal" value="false"/>
+    </bindings>
+    <bindings xmi:id="_8k6WaLq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+F7" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6Wabq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+F7" command="_8k6-Orq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Warq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+F8" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6Wa7q3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+F8" command="_8k69t7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WbLq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+F10" command="_8k696Lq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Wbbq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+F10" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6Wbrq3EeuE7ZD2-BPYdg" keySequence="ALT+SHIFT+Q X" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6Wb7q3EeuE7ZD2-BPYdg" keySequence="ALT+SHIFT+Q X" command="_8k6-Prq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <parameters xmi:id="_8k6WcLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.ui.views.ProblemView"/>
+    </bindings>
+    <bindings xmi:id="_8k6Wcbq3EeuE7ZD2-BPYdg" keySequence="CTRL+," command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6Wcrq3EeuE7ZD2-BPYdg" keySequence="CTRL+," command="_8k698Lq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Wc7q3EeuE7ZD2-BPYdg" keySequence="CTRL+-" command="_8k6-Jrq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WdLq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+F4" command="_8k695bq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Wdbq3EeuE7ZD2-BPYdg" keySequence="CTRL+." command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6Wdrq3EeuE7ZD2-BPYdg" keySequence="CTRL+." command="_8k6-X7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Wd7q3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+F6" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WeLq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+F6" command="_8k6-J7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Webq3EeuE7ZD2-BPYdg" keySequence="ALT+CTRL+SHIFT+P" command="_8k6-VLq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Werq3EeuE7ZD2-BPYdg" keySequence="CTRL+SPACE" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6We7q3EeuE7ZD2-BPYdg" keySequence="ALT+SHIFT+F7" command="_8k6-Wrq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6WfLq3EeuE7ZD2-BPYdg" keySequence="ALT+SHIFT+Q O" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6Wfbq3EeuE7ZD2-BPYdg" keySequence="ALT+SHIFT+Q O" command="_8k6-Prq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <parameters xmi:id="_8k6Wfrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.ui.views.ContentOutline"/>
+    </bindings>
+    <bindings xmi:id="_8k6Wf7q3EeuE7ZD2-BPYdg" keySequence="ALT+SHIFT+Q Q" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WgLq3EeuE7ZD2-BPYdg" keySequence="ALT+SHIFT+Q Q" command="_8k6-Prq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Wgbq3EeuE7ZD2-BPYdg" keySequence="CTRL+F7" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6Wgrq3EeuE7ZD2-BPYdg" keySequence="CTRL+F7" command="_8k69sLq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Wg7q3EeuE7ZD2-BPYdg" keySequence="CTRL+F8" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WhLq3EeuE7ZD2-BPYdg" keySequence="CTRL+F8" command="_8k6-h7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Whbq3EeuE7ZD2-BPYdg" keySequence="CTRL+F10" command="_8k69o7q3EeuE7ZD2-BPYdg"/>
+  </bindingTables>
+  <bindingTables xmi:id="_8k6Whrq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.crystalReportsDesignerScope" bindingContext="_8k6Wtrq3EeuE7ZD2-BPYdg">
+    <bindings xmi:id="_8k6Wh7q3EeuE7ZD2-BPYdg" keySequence="F5" command="_8k6-BLq3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WiLq3EeuE7ZD2-BPYdg" keySequence="F6" command="_8k6-Z7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <parameters xmi:id="_8k6Wibq3EeuE7ZD2-BPYdg" elementId="com.crystalreports.commands.changepane.direction" name="com.crystalreports.commands.changepane.direction" value="next"/>
+    </bindings>
+    <bindings xmi:id="_8k6Wirq3EeuE7ZD2-BPYdg" keySequence="CTRL+=" command="_8k6-hbq3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6Wi7q3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+P" command="_8k6-PLq3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WjLq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+R" command="_8k6-Fbq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <parameters xmi:id="_8k6Wjbq3EeuE7ZD2-BPYdg" elementId="com.crystalreports.commands.vieweditor.id" name="com.crystalreports.commands.vieweditor.id" value="com.businessobjects.crystalreports.designer.pages.reading"/>
+    </bindings>
+    <bindings xmi:id="_8k6Wjrq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+N" command="_8k6-F7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6Wj7q3EeuE7ZD2-BPYdg" keySequence="SHIFT+F6" command="_8k6-Z7q3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <parameters xmi:id="_8k6WkLq3EeuE7ZD2-BPYdg" elementId="com.crystalreports.commands.changepane.direction" name="com.crystalreports.commands.changepane.direction" value="previous"/>
+    </bindings>
+    <bindings xmi:id="_8k6Wkbq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+0" command="_8k6-Erq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <parameters xmi:id="_8k6Wkrq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.params.zoomtoggle" name="com.businessobjects.crystalreports.commands.params.zoomtoggle" value="width"/>
+    </bindings>
+    <bindings xmi:id="_8k6Wk7q3EeuE7ZD2-BPYdg" keySequence="CTRL+P" command="_8k6-Trq3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WlLq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+1" command="_8k69ybq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Wlbq3EeuE7ZD2-BPYdg" keySequence="CTRL+SHIFT+2" command="_8k69oLq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+      <parameters xmi:id="_8k6Wlrq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.params.zoomtoggle" name="com.businessobjects.crystalreports.commands.params.zoomtoggle" value="page"/>
+    </bindings>
+    <bindings xmi:id="_8k6Wl7q3EeuE7ZD2-BPYdg" keySequence="ALT+ARROW_LEFT" command="_8k6-O7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WmLq3EeuE7ZD2-BPYdg" keySequence="CTRL+T" command="_8k6-OLq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Wmbq3EeuE7ZD2-BPYdg" keySequence="ALT+ARROW_RIGHT" command="_8k692Lq3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6Wmrq3EeuE7ZD2-BPYdg" keySequence="CTRL+PAGE_UP" command="_8k6-FLq3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6Wm7q3EeuE7ZD2-BPYdg" keySequence="CTRL+PAGE_DOWN" command="_8k6-G7q3EeuE7ZD2-BPYdg"/>
+    <bindings xmi:id="_8k6WnLq3EeuE7ZD2-BPYdg" keySequence="CTRL+NUMPAD_ADD" command="_8k6-hbq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Wnbq3EeuE7ZD2-BPYdg" keySequence="CTRL+NUMPAD_SUBTRACT" command="_8k6-gbq3EeuE7ZD2-BPYdg">
+      <tags>schemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
+    </bindings>
+    <bindings xmi:id="_8k6Wnrq3EeuE7ZD2-BPYdg" keySequence="CTRL+-" command="_8k6-gbq3EeuE7ZD2-BPYdg"/>
+  </bindingTables>
+  <bindingTables xmi:id="_8k6Wn7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.viewerScope" bindingContext="_8k6Wt7q3EeuE7ZD2-BPYdg">
+    <bindings xmi:id="_8k6WoLq3EeuE7ZD2-BPYdg" keySequence="CTRL+F" command="_8k6-Gbq3EeuE7ZD2-BPYdg">
+      <parameters xmi:id="_8k6Wobq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.toggleviewvisibility.viewid" name="com.businessobjects.crystalreports.commands.toggleviewvisibility.viewid" value="com.businessobjects.crystalreports.viewer.searchpanel"/>
+    </bindings>
+    <bindings xmi:id="_8k6Worq3EeuE7ZD2-BPYdg" keySequence="CTRL+1" command="_8k6-Gbq3EeuE7ZD2-BPYdg">
+      <parameters xmi:id="_8k6Wo7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.toggleviewvisibility.viewid" name="com.businessobjects.crystalreports.commands.toggleviewvisibility.viewid" value="com.businessobjects.crystalreports.communitypanel"/>
+    </bindings>
+    <bindings xmi:id="_8k6WpLq3EeuE7ZD2-BPYdg" keySequence="CTRL+2" command="_8k6-Gbq3EeuE7ZD2-BPYdg">
+      <parameters xmi:id="_8k6Wpbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.toggleviewvisibility.viewid" name="com.businessobjects.crystalreports.commands.toggleviewvisibility.viewid" value="com.businessobjects.crystalreports.designer.grouptree"/>
+    </bindings>
+    <bindings xmi:id="_8k6Wprq3EeuE7ZD2-BPYdg" keySequence="CTRL+3" command="_8k6-Gbq3EeuE7ZD2-BPYdg">
+      <parameters xmi:id="_8k6Wp7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.toggleviewvisibility.viewid" name="com.businessobjects.crystalreports.commands.toggleviewvisibility.viewid" value="com.businessobjects.crystalreports.designer.promptpanel"/>
+    </bindings>
+    <bindings xmi:id="_8k6WqLq3EeuE7ZD2-BPYdg" keySequence="CTRL+4" command="_8k6-Gbq3EeuE7ZD2-BPYdg">
+      <parameters xmi:id="_8k6Wqbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.toggleviewvisibility.viewid" name="com.businessobjects.crystalreports.commands.toggleviewvisibility.viewid" value="com.businessobjects.crystalreports.viewer.searchpanel"/>
+    </bindings>
+  </bindingTables>
+  <bindingTables xmi:id="_8k6Wqrq3EeuE7ZD2-BPYdg" bindingContext="_8k6Wu7q3EeuE7ZD2-BPYdg"/>
+  <bindingTables xmi:id="_8k6Wq7q3EeuE7ZD2-BPYdg" bindingContext="_8k6WvLq3EeuE7ZD2-BPYdg"/>
+  <bindingTables xmi:id="_8k6WrLq3EeuE7ZD2-BPYdg" bindingContext="_8k6Wvbq3EeuE7ZD2-BPYdg"/>
+  <bindingTables xmi:id="_8k6Wrbq3EeuE7ZD2-BPYdg" bindingContext="_8k6Wvrq3EeuE7ZD2-BPYdg"/>
+  <bindingTables xmi:id="_8k6Wrrq3EeuE7ZD2-BPYdg" bindingContext="_8k6Wv7q3EeuE7ZD2-BPYdg"/>
+  <bindingTables xmi:id="_8k6Wr7q3EeuE7ZD2-BPYdg" bindingContext="_8k6WwLq3EeuE7ZD2-BPYdg"/>
+  <bindingTables xmi:id="_8k6WsLq3EeuE7ZD2-BPYdg" bindingContext="_8k6Wwbq3EeuE7ZD2-BPYdg"/>
+  <rootContext xmi:id="_8k6Wsbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.contexts.dialogAndWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Dialogs and Windows" description="Either a dialog or a window is open">
+    <children xmi:id="_8k6Wsrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.contexts.window" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Windows" description="A window is open">
+      <children xmi:id="_8k6Ws7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.e4.ui.contexts.views" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="%bindingcontext.name.bindingView"/>
+      <children xmi:id="_8k6WtLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.textEditorScope" name="Editing Text" description="Editing Text Context"/>
+    </children>
+    <children xmi:id="_8k6Wtbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.contexts.dialog" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Dialogs" description="A dialog is open"/>
+    <children xmi:id="_8k6Wtrq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.crystalReportsDesignerScope" name="Crystal Reports Designer" description="The context for a Crystal Report Document">
+      <children xmi:id="_8k6Wt7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.viewerScope" name="SAP Crystal Reports 2020 viewer"/>
+      <children xmi:id="_8k6WuLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.crystalReportsDesignerNotInTextScope" name="Crystal Reports Designer" description="The context for a Crystal Report Document"/>
+    </children>
+  </rootContext>
+  <rootContext xmi:id="_8k6Wubq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.contexts.workbenchMenu" name="Workbench Menu" description="When no Workbench windows are active"/>
+  <rootContext xmi:id="_8k6Wurq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.contexts.actionSet" name="Action Set" description="Parent context for action sets"/>
+  <rootContext xmi:id="_8k6Wu7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.bimodeler.connection.publishconnection" name="Auto::com.businessobjects.bimodeler.connection.publishconnection"/>
+  <rootContext xmi:id="_8k6WvLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.bimodeler.shared.tb.contrib" name="Auto::com.businessobjects.bimodeler.shared.tb.contrib"/>
+  <rootContext xmi:id="_8k6Wvbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.NavigateActionSet" name="Auto::org.eclipse.ui.NavigateActionSet"/>
+  <rootContext xmi:id="_8k6Wvrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.actionSet.keyBindings" name="Auto::org.eclipse.ui.actionSet.keyBindings"/>
+  <rootContext xmi:id="_8k6Wv7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.WorkingSetModificationActionSet" name="Auto::org.eclipse.ui.WorkingSetModificationActionSet"/>
+  <rootContext xmi:id="_8k6WwLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.WorkingSetActionSet" name="Auto::org.eclipse.ui.WorkingSetActionSet"/>
+  <rootContext xmi:id="_8k6Wwbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.actionSet.openFiles" name="Auto::org.eclipse.ui.actionSet.openFiles"/>
+  <descriptors xmi:id="_8k6Wwrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.e4.ui.compatibility.editor" allowMultiple="true" category="org.eclipse.e4.primaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor">
+    <tags>Editor</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6Ww7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.grouptree" label="Group Tree" iconURI="platform:/plugin/com.businessobjects.crystalreports.designer.grouptree/icons/group_tree_16x16.gif" tooltip="" category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="com.businessobjects.crystalreports.designer.grouptree.GroupTreeView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="com.businessobjects.crystalreports.designer.grouptree"/>
+    <tags>View</tags>
+    <tags>categoryTag:Other</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6WxLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.promptpanel" label="Prompts" iconURI="platform:/plugin/com.businessobjects.crystalreports.designer.promptingui/icons/prompt_panel_16x16.gif" tooltip="" category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="com.businessobjects.crystalreports.promptingui.panel.PromptingPanelView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="com.businessobjects.crystalreports.designer.promptingui"/>
+    <tags>View</tags>
+    <tags>categoryTag:Other</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6Wxbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.viewer.searchpanel" label="Find" iconURI="platform:/plugin/com.businessobjects.crystalreports.designer.searchpanel/icons/search_16x16.gif" tooltip="" category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="com.businessobjects.crystalreports.designer.search.SearchView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="com.businessobjects.crystalreports.designer.searchpanel"/>
+    <tags>View</tags>
+    <tags>categoryTag:Other</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6Wxrq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.startingpage.ui.StartingPageView" label="Crystal Report Start Page" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="com.businessobjects.crystalreports.viewershellext.Win32ViewerStartingPageView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="com.businessobjects.crystalreports.viewershellext.win32"/>
+    <tags>View</tags>
+    <tags>categoryTag:Other</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6Wx7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.communitypanel" label="Community" iconURI="platform:/plugin/com.businessobjects.crystalreports.viewer.shell/icons/community_16x16.gif" tooltip="" category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="com.bobj.crystalreports.viewer.views.CommunityView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="com.businessobjects.crystalreports.viewer.shell"/>
+    <tags>View</tags>
+    <tags>categoryTag:Other</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6WyLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.dummypanelview" label="" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="com.businessobjects.crystalreports.rcpbaseshell.presentation.sidepanel.DummyPanelView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="com.businessobjects.crystalreports.viewer.shell"/>
+    <tags>View</tags>
+    <tags>categoryTag:Other</tags>
+    <tags>NoRestore</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6Wybq3EeuE7ZD2-BPYdg" elementId="com.bobj.crystalreports.designer.ViewerEditorView" label="ViewerEditorView" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="com.bobj.crystalreports.viewer.ViewerEditorView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="com.businessobjects.crystalreports.viewer.shell"/>
+    <tags>View</tags>
+    <tags>categoryTag:Other</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6Wyrq3EeuE7ZD2-BPYdg" elementId="com.sap.dataexplorer.ui.view" label="Data Explorer" iconURI="platform:/plugin/com.sap.dataexplorer.ui/icons/Small/ViewData.png" tooltip="" allowMultiple="true" category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="com.sap.dataexplorer.ui.DataExplorerViewPart"/>
+    <persistedState key="originalCompatibilityViewBundle" value="com.sap.dataexplorer.ui"/>
+    <tags>View</tags>
+    <tags>categoryTag:Other</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6Wy7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.gef.ui.palette_view" label="Palette" iconURI="platform:/plugin/org.eclipse.gef/icons/palette_view.gif" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.gef.ui.views.palette.PaletteView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.gef"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6WzLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.help.ui.HelpView" label="Help" iconURI="platform:/plugin/org.eclipse.help.ui/icons/view16/help_view.gif" tooltip="" category="Help" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.help.ui.internal.views.HelpView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.help.ui"/>
+    <tags>View</tags>
+    <tags>categoryTag:Help</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6Wzbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.ProgressView" label="Progress" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/pview.png" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.progress.ProgressView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6Wzrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.ResourceNavigator" label="Navigator" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/filenav_nav.png" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.views.navigator.ResourceNavigator"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6Wz7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.BookmarkView" label="Bookmarks" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/bkmrk_nav.png" tooltip="" allowMultiple="true" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.BookmarksView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6W0Lq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.TaskList" label="Tasks" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/tasks_tsk.png" tooltip="" allowMultiple="true" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.TasksView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6W0bq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.ProblemView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" tooltip="" allowMultiple="true" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.ProblemsView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6W0rq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.AllMarkersView" label="Markers" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" tooltip="" allowMultiple="true" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.AllMarkersView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6W07q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.PropertySheet" label="Properties" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/prop_ps.png" tooltip="" allowMultiple="true" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.views.properties.PropertySheet"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.views"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6W1Lq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.ContentOutline" label="Outline" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/outline_co.png" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.views.contentoutline.ContentOutline"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.views"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_8k6W1bq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.internal.introview" label="Welcome" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.ViewIntroAdapterPart"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui"/>
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <commands xmi:id="_8k69nbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.pinEditor" commandName="Pin Editor" description="Pin the current editor" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69nrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.nextTab" commandName="Next Tab" description="Switch to the next tab" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69n7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.quickAccess" commandName="Quick Access" description="Quickly access UI elements" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69oLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.zoompage" commandName="Fit Page" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k69obq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.params.zoomtoggle" name="Fit Page"/>
+  </commands>
+  <commands xmi:id="_8k69orq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.designer.category.zoom.zoomout" commandName="zoomout" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69o7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.designer.category.noop" commandName="noop" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69pLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.hidesidepanels" commandName="Hide" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69pbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.copyBuildIdCommand" commandName="Copy Build Id Information To Clipboard" description="Copies the build identification information to the clipboard." category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69prq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.preview.togglemultipage" commandName="Toggle Multi-page Mode" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69p7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.drilldownsubreport" commandName="Isolate Information" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69qLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.properties" commandName="Properties" description="Display the properties of the selected item" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69qbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.preferences" commandName="Preferences" description="Open the preferences dialog" category="_8k6-ubq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k69qrq3EeuE7ZD2-BPYdg" elementId="preferencePageId" name="Preference Page"/>
+  </commands>
+  <commands xmi:id="_8k69q7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.search.findPrevious" commandName="Find Previous" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69rLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.activeContextInfo" commandName="Show activeContext Info" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69rbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.exploreDataOnline" commandName="Explore this report's data online - BETA" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69rrq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.interactivesortdescending" commandName="Sort Descending" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69r7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.copy" commandName="Copy" description="Copy the selection to the clipboard" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69sLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.nextView" commandName="Next View" description="Switch to the next view" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69sbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.bimodeler.datafoundation.command.toggleMultipleTableState" commandName="Toggle Display Selected Tables" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69srq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.text.contentAssist.contextInformation" commandName="Context Information" description="Show Context Information" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69s7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.properties.NewPropertySheetCommand" commandName="Properties" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69tLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.grouptree.drilldown" commandName="Isolate Information" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69tbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.saveAs" commandName="Save As" description="Save the current contents to another location" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69trq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.addToWorkingSet" commandName="Add to Working Set" description="Adds the selected object to a working set." category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69t7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.previousPerspective" commandName="Previous Perspective" description="Switch to the previous perspective" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69uLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.splitEditor" commandName="Toggle Split Editor" description="Split or join the currently active editor." category="_8k6-ubq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k69ubq3EeuE7ZD2-BPYdg" elementId="Splitter.isHorizontal" name="Orientation" optional="false"/>
+  </commands>
+  <commands xmi:id="_8k69urq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.collapseAll" commandName="Collapse All" description="Collapse the current tree" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69u7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.goInto" commandName="Go Into" description="Navigate into the selected item" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69vLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.showsidepanelview" commandName="Toggle Side Panel View" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k69vbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.showsidepanel.viewid" name="Toggle Side Panel View"/>
+  </commands>
+  <commands xmi:id="_8k69vrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.maximizePart" commandName="Maximize Active View or Editor" description="Toggles maximize/restore state of active view or editor" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69v7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.lockToolBar" commandName="Toggle Lock Toolbars" description="Toggle the Lock on the Toolbars" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69wLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.gef.ui.palette_view" commandName="Palette" category="_8k6-sbq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69wbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.newEditor" commandName="Clone Editor" description="Open another editor on the active editor's input" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69wrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.minimizePart" commandName="Minimize Active View or Editor" description="Minimizes the active view or editor" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69w7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.text.contentAssist.proposals" commandName="Content Assist" description="Content Assist" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69xLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.up" commandName="Up" description="Navigate up one level" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69xbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.activateEditor" commandName="Activate Editor" description="Activate the editor" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69xrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.removeFromWorkingSet" commandName="Remove From Working Set" description="Removes the selected object from a working set." category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69x7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.showSystemMenu" commandName="Show System Menu" description="Show the system menu" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69yLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.visitDataOnline" commandName="View previous explorations" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69ybq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.zoomactualsize" commandName="Actual Size" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69yrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.help.ui.ignoreMissingPlaceholders" commandName="Do not warn of missing documentation" description="Sets the help preferences to no longer report a warning about the current set of missing documents." category="_8k6-u7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69y7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.savePerspective" commandName="Save Perspective As" description="Save the current perspective" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69zLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.deleteCompleted" commandName="Delete Completed Tasks" description="Delete the tasks marked as completed" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69zbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.toggleautoupdate" commandName="Enable Auto-Update" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69zrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.move" commandName="Move..." description="Move the selected item" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69z7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.preview.recentlocation" commandName="Recent Location" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k690Lq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.recentlocation.delta" name="Delta"/>
+  </commands>
+  <commands xmi:id="_8k690bq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.perspectives.showPerspective" commandName="Show Perspective" description="Show a particular perspective" category="_8k6-s7q3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k690rq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.perspectives.showPerspective.perspectiveId" name="Parameter"/>
+    <parameters xmi:id="_8k6907q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.perspectives.showPerspective.newWindow" name="In New Window"/>
+  </commands>
+  <commands xmi:id="_8k691Lq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.linkWithEditor" commandName="Toggle Link with Editor" description="Toggles linking of a view's selection with the active editor's selection" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k691bq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.openEditorDropDown" commandName="Quick Switch Editor" description="Open the editor drop down list" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k691rq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.goToResource" commandName="Go to" description="Go to a particular resource in the active view" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6917q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.resetPerspective" commandName="Reset Perspective" description="Reset the current perspective to its default state" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k692Lq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.preview.goforward" commandName="Go Forward" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k692bq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.drilldownfield" commandName="Show Hidden Section" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k692rq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.undo" commandName="Undo" description="Undo the last operation" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6927q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.preview.contextrefresh" commandName="Refresh" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k693Lq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.refresh.options" name="Refresh Options"/>
+    <parameters xmi:id="_8k693bq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.contextrefresh.creditor" name="CR Editor" optional="false"/>
+  </commands>
+  <commands xmi:id="_8k693rq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.project.buildLast" commandName="Repeat Working Set Build" description="Repeat the last working set build" category="_8k6-srq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6937q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.preview.goto.page.by.number" commandName="Go to a specific page" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k694Lq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.goto.page.by.number.parameter" name="Page Number" optional="false"/>
+  </commands>
+  <commands xmi:id="_8k694bq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.project.buildProject" commandName="Build Project" description="Build the selected project" category="_8k6-srq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k694rq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.newQuickMenu" commandName="New menu" description="Open the New menu" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6947q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.project.openProject" commandName="Open Project" description="Open a project" category="_8k6-srq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k695Lq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.openWorkspace" commandName="Switch Workspace" description="Open the workspace selection dialog" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k695bq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.closeAll" commandName="Close All" description="Close all editors" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k695rq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.clearviewfilter" commandName="Clear the report filter" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6957q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.cut" commandName="Cut" description="Cut the selection to the clipboard" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k696Lq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.bimodeler.df.source.command.publishConnection" commandName="Publish connection on Query Server" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k696bq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.designer.category.zoom.zoomin" commandName="zoomin" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k696rq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.paste" commandName="Paste" description="Paste from the clipboard" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6967q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.part.nextPage" commandName="Next Page" description="Switch to the next page" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k697Lq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.drilldownchart" commandName="Show More" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k697bq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.drilldownchart.type" name="Drill Down Chart type" optional="false"/>
+    <parameters xmi:id="_8k697rq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.drilldownchart.index" name="Drill Down Chart index"/>
+  </commands>
+  <commands xmi:id="_8k6977q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.updatenow" commandName="Update Now..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k698Lq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.previous" commandName="Previous" description="Navigate to the previous item" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k698bq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.project.properties" commandName="Properties" description="Display the properties of the selected item's project " category="_8k6-srq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k698rq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.rename" commandName="Rename" description="Rename the selected item" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6987q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.project.buildAll" commandName="Build All" description="Build all projects" category="_8k6-srq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k699Lq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.search.findNext" commandName="Find Next" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k699bq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.export" commandName="Export" description="Export" category="_8k6-t7q3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k699rq3EeuE7ZD2-BPYdg" elementId="exportWizardId" name="Export Wizard"/>
+  </commands>
+  <commands xmi:id="_8k6997q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.exit" commandName="Open..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69-Lq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.print" commandName="Print" description="Print" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69-bq3EeuE7ZD2-BPYdg" elementId="com.crystalreports.commands.export" commandName="Export" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k69-rq3EeuE7ZD2-BPYdg" elementId="com.crystalreports.commands.export.format.parameter" name="Export Format" optional="false"/>
+  </commands>
+  <commands xmi:id="_8k69-7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.help.ui.closeTray" commandName="Close User Assistance Tray" description="Close the user assistance tray containing context help information and cheat sheets." category="_8k6-u7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69_Lq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.copyConfigCommand" commandName="Copy Configuration Data To Clipboard" description="Copies the configuration data (system properties, installed bundles, etc) to the clipboard." category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69_bq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.forwardHistory" commandName="Forward History" description="Move forward in the editor navigation history" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69_rq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.spy" commandName="Show Contributing Plug-in" description="Shows contribution information for the currently selected element" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k69_7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.help.helpSearch" commandName="Help Search" description="Open the help search" category="_8k6-u7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-ALq3EeuE7ZD2-BPYdg" elementId="org.eclipse.e4.ui.importer.openDirectory" commandName="Open Projects from File System..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Abq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.restartWorkbench" commandName="Restart" description="Restart the workbench" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Arq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.project.rebuildAll" commandName="Rebuild All" description="Rebuild all projects" category="_8k6-srq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-A7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.integration.eclipse.crviewer.preferences.preferencesDialog" commandName="Preferences..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-BLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.preview.refresh" commandName="Refresh" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-Bbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.refresh.options" name="Refresh Options"/>
+  </commands>
+  <commands xmi:id="_8k6-Brq3EeuE7ZD2-BPYdg" elementId="org.eclipse.gef.zoom_in" commandName="Zoom In" description="Zoom In" category="_8k6-tbq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-B7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.zoomspecific" commandName="Zoom To a Specific Level" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-CLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.zoom.level" name="Zoom Level"/>
+  </commands>
+  <commands xmi:id="_8k6-Cbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.text.openLocalFile" commandName="Open File..." description="Open a file" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Crq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.showViewMenu" commandName="Show View Menu" description="Show the view menu" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-C7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.configureFilters" commandName="Filters..." description="Configure the filters to apply to the markers view" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-DLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.backwardHistory" commandName="Backward History" description="Move backward in the editor navigation history" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Dbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.previousTab" commandName="Previous Tab" description="Switch to the previous tab" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Drq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.refresh" commandName="Refresh" description="Refresh the selected items" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-D7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.customersupport" commandName="Customer Support..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-ELq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.customerfeedback" commandName="General Feedback..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Ebq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.closeAllPerspectives" commandName="Close All Perspectives" description="Close all open perspectives" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Erq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.zoomwidth" commandName="Fit Width" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-E7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.params.zoomtoggle" name="Fit Width"/>
+  </commands>
+  <commands xmi:id="_8k6-FLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.preview.previouspage" commandName="Previous Page" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Fbq3EeuE7ZD2-BPYdg" elementId="com.crystalreports.commands.vieweditor" commandName="View Editor" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-Frq3EeuE7ZD2-BPYdg" elementId="com.crystalreports.commands.vieweditor.id" name="Editor ID" optional="false"/>
+  </commands>
+  <commands xmi:id="_8k6-F7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.preview.goto.page" commandName="Page" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-GLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.preview.lastpage" commandName="Last Page" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Gbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.toggleviewvisibility" commandName="Toggle View Visibility" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-Grq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.toggleviewvisibility.viewid" name="View Id" optional="false"/>
+  </commands>
+  <commands xmi:id="_8k6-G7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.preview.nextpage" commandName="Next Page" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-HLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.reportproperties" commandName="Summary Info..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Hbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.designer.startingpage.commands.blankreport" commandName="From Data Source" description="Creates a new blank Crystal Reports document." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Hrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.showInSystemExplorer" commandName="Show In (System Explorer)" description="Show in system's explorer (file manager)" category="_8k6-tLq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-H7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.showInSystemExplorer.path" name="Resource System Path Parameter"/>
+  </commands>
+  <commands xmi:id="_8k6-ILq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.expandAll" commandName="Expand All" description="Expand the current tree" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Ibq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.saveAll" commandName="Save All" description="Save all current contents" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Irq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.showKeyAssist" commandName="Show Key Assist" description="Show the key assist dialog" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-I7q3EeuE7ZD2-BPYdg" elementId="com.crystalreports.commands.showsql" commandName="Show SQL Query..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-JLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.closeOthers" commandName="Close Others" description="Close all editors except the one that is active" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Jbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.save" commandName="Save" description="Save the current contents" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Jrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.gef.zoom_out" commandName="Zoom Out" description="Zoom Out" category="_8k6-tbq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-J7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.previousEditor" commandName="Previous Editor" description="Switch to the previous editor" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-KLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.findReplace" commandName="Find and Replace" description="Find and replace text" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Kbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.search.find" commandName="Find" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Krq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.OpenMarkersView" commandName="Open Another" description="Open another view" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-K7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.help.tipsAndTricksAction" commandName="Tips and Tricks" description="Open the tips and tricks help page" category="_8k6-u7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-LLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.fullscreenmode" commandName="Toggle Full Screen" description="Toggles the window between full screen and normal" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Lbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.nextEditor" commandName="Next Editor" description="Switch to the next editor" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Lrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.project.closeUnrelatedProjects" commandName="Close Unrelated Projects" description="Close unrelated projects" category="_8k6-srq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-L7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.markers.copyMarkerResourceQualifiedName" commandName="Copy Resource Qualified Name To Clipboard" description="Copies markers resource qualified name to the clipboard" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-MLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.help.helpContents" commandName="Help Contents" description="Open the help contents" category="_8k6-u7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Mbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.delete" commandName="Delete" description="Delete the selection" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Mrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.configureColumns" commandName="Configure Columns..." description="Configure the columns in the markers view" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-M7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.exit" commandName="Exit" description="Exit the application" category="_8k6-t7q3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-NLq3EeuE7ZD2-BPYdg" elementId="mayPrompt" name="may prompt"/>
+  </commands>
+  <commands xmi:id="_8k6-Nbq3EeuE7ZD2-BPYdg" elementId="com.crystalreports.commands.openurl" commandName="Open URL" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-Nrq3EeuE7ZD2-BPYdg" elementId="com.crystalreports.commands.openurl.url" name="URL" optional="false"/>
+  </commands>
+  <commands xmi:id="_8k6-N7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.addBookmark" commandName="Add Bookmark" description="Add a bookmark" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-OLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.zoomto" commandName="Zoom To" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Obq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.interactivesortascending" commandName="Sort Ascending" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Orq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.previousView" commandName="Previous View" description="Switch to the previous view" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-O7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.preview.goback" commandName="Go Back" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-PLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.printall" commandName="Print All (include hidden sections)..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Pbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.revert" commandName="Revert" description="Revert to the last saved state" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Prq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.showView" commandName="Show View" description="Shows a particular view" category="_8k6-sbq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-P7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.showView.viewId" name="View"/>
+    <parameters xmi:id="_8k6-QLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.showView.secondaryId" name="Secondary Id"/>
+    <parameters xmi:id="_8k6-Qbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.views.showView.makeFast" name="As FastView"/>
+  </commands>
+  <commands xmi:id="_8k6-Qrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.selectAll" commandName="Select All" description="Select all" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Q7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.markers.copyDescription" commandName="Copy Description To Clipboard" description="Copies markers description field to the clipboard" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-RLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.showResourceByPath" commandName="Show Resource in Navigator" description="Show a resource in the Navigator given its path" category="_8k6-tLq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-Rbq3EeuE7ZD2-BPYdg" elementId="resourcePath" name="Resource Path" typeId="org.eclipse.ui.ide.resourcePath" optional="false"/>
+  </commands>
+  <commands xmi:id="_8k6-Rrq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.integrationbase.configureservers" commandName="Server Connections..." category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-R7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.viewer.integrationbase.servers.ServerPropertyDialog.parameters.selectedServer" name="Default selection of server"/>
+  </commands>
+  <commands xmi:id="_8k6-SLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.hidetrimbars" commandName="Toggle visibility of the window toolbars" description="Toggle the visibility of the toolbars of the current window" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Sbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.project.rebuildProject" commandName="Rebuild Project" description="Rebuild the selected projects" category="_8k6-srq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Srq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.project.buildAutomatically" commandName="Build Automatically" description="Toggle the workspace build automatically function" category="_8k6-srq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-S7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.about" commandName="About SAP Crystal Reports 2020 viewer" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-TLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.import" commandName="Import" description="Import" category="_8k6-t7q3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-Tbq3EeuE7ZD2-BPYdg" elementId="importWizardId" name="Import Wizard"/>
+  </commands>
+  <commands xmi:id="_8k6-Trq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.print" commandName="Print..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-T7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.switchToEditor" commandName="Switch to Editor" description="Switch to an editor" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-ULq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.help.dynamicHelp" commandName="Show Contextual Help" description="Open the contextual help" category="_8k6-u7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Ubq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.nextSubTab" commandName="Next Sub-Tab" description="Switch to the next sub-tab" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Urq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.addTask" commandName="Add Task..." description="Add a task" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-U7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.togglestatusbar" commandName="Toggle Statusbar" description="Toggle the visibility of the bottom status bar" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-VLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.bimodeler.datafoundation.command.parseFullyQualifiedPath" commandName="Parse Fully Qualified Path" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Vbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.closePart" commandName="Close Part" description="Close the active workbench part" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Vrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.project.cleanAction" commandName="Build Clean" description="Discard old built state" category="_8k6-srq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-V7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.help.installationDialog" commandName="Installation Information" description="Open the installation dialog" category="_8k6-u7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-WLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.openhelp" commandName="Crystal Reports viewer Help" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Wbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.back" commandName="Back" description="Navigate back" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Wrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.part.previousPage" commandName="Previous Page" description="Switch to the previous page" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-W7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.browse" commandName="Browse Data..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-XLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.opentemplate" commandName="From Template..." description="Creates a new Crystal Reports document from a web template." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Xbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.showstartpage" commandName="Show Start Page" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Xrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.showInQuickMenu" commandName="Show In..." description="Open the Show In menu" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-X7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.next" commandName="Next" description="Navigate to the next item" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-YLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.closePerspective" commandName="Close Perspective" description="Close the current perspective" category="_8k6-ubq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-Ybq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.closePerspective.perspectiveId" name="Perspective Id"/>
+  </commands>
+  <commands xmi:id="_8k6-Yrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.project.closeProject" commandName="Close Project" description="Close the selected project" category="_8k6-srq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-Y7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.emailcurrentreport" commandName="Attach to Email..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-ZLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.browser.openBundleResource" commandName="Open Resource in Browser" description="Opens a bundle resource in the default web browser." category="_8k6-ubq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-Zbq3EeuE7ZD2-BPYdg" elementId="plugin" name="Plugin"/>
+    <parameters xmi:id="_8k6-Zrq3EeuE7ZD2-BPYdg" elementId="path" name="Path"/>
+  </commands>
+  <commands xmi:id="_8k6-Z7q3EeuE7ZD2-BPYdg" elementId="com.crystalreports.commands.changepane" commandName="Change Pane" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-aLq3EeuE7ZD2-BPYdg" elementId="com.crystalreports.commands.changepane.direction" name="Change Pane Parameter" optional="false"/>
+  </commands>
+  <commands xmi:id="_8k6-abq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.help.aboutAction" commandName="About" description="Open the about dialog" category="_8k6-u7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-arq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.closeAllSaved" commandName="Close All Saved" description="Close all saved editors" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-a7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.edit.redo" commandName="Redo" description="Redo the last operation" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-bLq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.selectPVLCommand" commandName="Preferred Viewing Locale" category="_8k6-urq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-bbq3EeuE7ZD2-BPYdg" elementId="com.crystalreports.parameter.pvl" name="Preferred Viewing Locale"/>
+  </commands>
+  <commands xmi:id="_8k6-brq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.selectWorkingSets" commandName="Select Working Sets" description="Select the working sets that are applicable for this window." category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-b7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.newWizard" commandName="New" description="Open the New item wizard" category="_8k6-t7q3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-cLq3EeuE7ZD2-BPYdg" elementId="newWizardId" name="New Wizard"/>
+  </commands>
+  <commands xmi:id="_8k6-cbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.newWindow" commandName="New Window" description="Open another window" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-crq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.takeaction.showmenu" commandName="Select a Bound Action" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-c7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.openfile" commandName="Open..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-dLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.e4.ui.importer.configureProject" commandName="Configure and Detect Nested Projects..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-dbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.file.close" commandName="Close" description="Close the active editor" category="_8k6-t7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-drq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.preview.firstpage" commandName="First Page" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-d7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.customizePerspective" commandName="Customize Perspective" description="Customize the current perspective" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-eLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.help.quickStartAction" commandName="Welcome" description="Show help for beginning users" category="_8k6-u7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-ebq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.previousSubTab" commandName="Previous Sub-Tab" description="Switch to the previous sub-tab" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-erq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.hideShowEditors" commandName="Toggle Shared Area Visibility" description="Toggles the visibility of the shared area" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-e7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.showIn" commandName="Show In" category="_8k6-tLq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-fLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.showIn.targetId" name="Show In Target Id" optional="false"/>
+  </commands>
+  <commands xmi:id="_8k6-fbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.help.displayHelp" commandName="Display Help" description="Display a Help topic" category="_8k6-u7q3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-frq3EeuE7ZD2-BPYdg" elementId="href" name="Help topic href"/>
+  </commands>
+  <commands xmi:id="_8k6-f7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.help.ui.indexcommand" commandName="Index" description="Show Keyword Index" category="_8k6-u7q3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-gLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.showContextMenu" commandName="Show Context Menu" description="Show the context menu" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-gbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.zoomout" commandName="Zoom Out" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-grq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.markCompleted" commandName="Mark Completed" description="Mark the selected tasks as completed" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-g7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals" commandName="Quick Fix" description="Suggest possible fixes for a problem" category="_8k6-trq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-hLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.forward" commandName="Forward" description="Navigate forward" category="_8k6-tLq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-hbq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.zoomin" commandName="Zoom In" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-hrq3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.reportviewfilter" commandName="Filter the report" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-h7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.window.nextPerspective" commandName="Next Perspective" description="Switch to the next perspective" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-iLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ToggleCoolbarAction" commandName="Toggle Main Toolbar Visibility" description="Toggles the visibility of the window toolbar" category="_8k6-ubq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-ibq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.navigate.openResource" commandName="Open Resource" description="Open an editor on a particular resource" category="_8k6-tLq3EeuE7ZD2-BPYdg">
+    <parameters xmi:id="_8k6-irq3EeuE7ZD2-BPYdg" elementId="filePath" name="File Path" typeId="org.eclipse.ui.ide.resourcePath"/>
+  </commands>
+  <commands xmi:id="_8k6-i7q3EeuE7ZD2-BPYdg" elementId="com.businessobjects.crystalreports.commands.preview.drillup" commandName="Drill Up" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-jLq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.connection.publishconnection/com.businessobjects.bimodeler.connection.actionPublishCMS" commandName="Publish Connection to a Repository" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-jbq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.shared.tb.contrib/com.businessobjects.bimodeler.shared.actions.PrintActionMenu" commandName="Print" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-jrq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.shared.tb.contrib/com.businessobjects.bimodeler.framework.actions.ShowHideSearchAction" commandName="Find/Replace..." description="Find/Replace" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-j7q3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.shared.tb.contrib/com.businessobjects.bimodeler.shared.checkintegrity.CheckIntegrityAction" commandName="Check Integrity..." description="Check Integrity" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-kLq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.shared.tb.contrib/com.businessobjects.bimodeler.shared.actions.OpenWebBrowserEditorAction" commandName="Online Tutorials" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-kbq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.DynamicEditDataSourceAction" commandName="Change Connection..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-krq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.InsertJoinAction" commandName="Join..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-k7q3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.InsertDerivedTableAction" commandName="Derived Table..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-lLq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.CreateAliasTablesAction" commandName="Alias..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-lbq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.InsertTablesWizardAction" commandName="Tables..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-lrq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.InsertContextAction" commandName="Context..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-l7q3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.InsertPromptAction" commandName="Prompt..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-mLq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.InsertCommentAction" commandName="Comment" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-mbq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.InsertDataFoundationViewAction" commandName="View..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-mrq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.InsertSQLQueryLovAction" commandName="List of values based on custom SQL" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-m7q3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.InsertStaticLovAction" commandName="Static list of values" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-nLq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.DetectLoopsAction" commandName="Loops" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-nbq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.DetectContextsAction" commandName="Contexts" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-nrq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.DetectAliasesDialogAction" commandName="Aliases" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-n7q3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.DetectJoinsCardinalityAction" commandName="Cardinalities" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-oLq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.DetectJoinsWizardAction" commandName="Joins" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-obq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.DetectTableKeysAction" commandName="Keys" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-orq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.DetectTablesRowCountAction" commandName="Row Count" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-o7q3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.RefreshStructureAction" commandName="Refresh Structure..." category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <commands xmi:id="_8k6-pLq3EeuE7ZD2-BPYdg" elementId="AUTOGEN:::com.businessobjects.bimodeler.editors.datafoundation/com.businessobjects.bimodeler.datafoundation.actions.AutoArrangeTablesAction" commandName="Auto Arrange" category="_8k6-urq3EeuE7ZD2-BPYdg"/>
+  <addons xmi:id="_8k6-pbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_8k6-prq3EeuE7ZD2-BPYdg" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_8k6-p7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_8k6-qLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.e4.ui.workbench.commands.model" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_8k6-qbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_8k6-qrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  <addons xmi:id="_8k6-q7q3EeuE7ZD2-BPYdg" elementId="Cleanup Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.cleanupaddon.CleanupAddon"/>
+  <addons xmi:id="_8k6-rLq3EeuE7ZD2-BPYdg" elementId="DnD Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.dndaddon.DnDAddon"/>
+  <addons xmi:id="_8k6-rbq3EeuE7ZD2-BPYdg" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
+  <addons xmi:id="_8k6-rrq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <addons xmi:id="_8k6-r7q3EeuE7ZD2-BPYdg" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
+  <addons xmi:id="_8k6-sLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <categories xmi:id="_8k6-sbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
+  <categories xmi:id="_8k6-srq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.category.project" name="Project"/>
+  <categories xmi:id="_8k6-s7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.category.perspectives" name="Perspectives" description="Commands for opening perspectives"/>
+  <categories xmi:id="_8k6-tLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.category.navigate" name="Navigate"/>
+  <categories xmi:id="_8k6-tbq3EeuE7ZD2-BPYdg" elementId="org.eclipse.gef.category.view" name="View" description="View"/>
+  <categories xmi:id="_8k6-trq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.category.edit" name="Edit"/>
+  <categories xmi:id="_8k6-t7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.category.file" name="File"/>
+  <categories xmi:id="_8k6-uLq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.ide.markerContents" name="Contents" description="The category for menu contents"/>
+  <categories xmi:id="_8k6-ubq3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.category.window" name="Window"/>
+  <categories xmi:id="_8k6-urq3EeuE7ZD2-BPYdg" elementId="org.eclipse.core.commands.categories.autogenerated" name="Uncategorized" description="Commands that were either auto-generated or have no category"/>
+  <categories xmi:id="_8k6-u7q3EeuE7ZD2-BPYdg" elementId="org.eclipse.ui.category.help" name="Help"/>
+</application:Application>

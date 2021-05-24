@@ -11,13 +11,10 @@ namespace PSMDesktopUI.ViewModels
 {
     public class AddServiceViewModel : Screen
     {
-        private readonly IWindowManager _windowManager;
-
         private readonly ISalesEndpoint _salesEndpoint;
         private readonly IServiceEndpoint _serviceEndpoint;
         private readonly ITechnicianEndpoint _technicianEndpoint;
 
-        private bool _showTextFields = false;
         private bool _showSalesGrid = true;
         private bool _isSalesLoading = false;
 
@@ -55,17 +52,6 @@ namespace PSMDesktopUI.ViewModels
 
         private TechnicianModel _selectedTechnician;
         private ServiceStatus _selectedStatus;
-
-        public bool ShowTextFields
-        {
-            get => _showTextFields;
-
-            set
-            {
-                _showTextFields = value;
-                NotifyOfPropertyChange(() => ShowTextFields);
-            }
-        }
 
         public bool ShowSalesGrid
         {
@@ -424,11 +410,8 @@ namespace PSMDesktopUI.ViewModels
             get => !string.IsNullOrWhiteSpace(NamaPelanggan) && !string.IsNullOrWhiteSpace(TipeHp) && !string.IsNullOrEmpty(Kerusakan);
         }
 
-        public AddServiceViewModel(IWindowManager windowManager, ISalesEndpoint salesEndpoint,
-                                   ITechnicianEndpoint technicianEndpoint, IServiceEndpoint serviceEndpoint)
+        public AddServiceViewModel(ISalesEndpoint salesEndpoint, ITechnicianEndpoint technicianEndpoint, IServiceEndpoint serviceEndpoint)
         {
-            _windowManager = windowManager;
-
             _salesEndpoint = salesEndpoint;
             _serviceEndpoint = serviceEndpoint;
             _technicianEndpoint = technicianEndpoint;
@@ -458,8 +441,6 @@ namespace PSMDesktopUI.ViewModels
         public void ConfirmSales()
         {
             ShowSalesGrid = false;
-            ShowTextFields = true;
-            
             SalesId = SelectedSales.Id;
         }
 

@@ -81,7 +81,7 @@
 
         <!-- Input text fields -->
         <dxlc:LayoutControl Orientation="Vertical" dxe:ValidationService.IsValidationContainer="True">
-            <dxlc:LayoutGroup Orientation="Horizontal" Visibility="{c:Binding Path=ShowTextFields, FalseToVisibility=Hidden}">
+            <dxlc:LayoutGroup Orientation="Horizontal" Visibility="{c:Binding Path=!ShowSalesGrid, FalseToVisibility=Hidden}">
                 <dxlc:LayoutGroup Orientation="Vertical" ItemSpace="4">
                     <dxlc:LayoutItem Label="Nama Pelanggan:" Margin="4">
                         <dxe:TextEdit x:Name="NamaPelanggan" Margin="10 0 0 0" Height="30"
@@ -234,12 +234,11 @@
                 <dx:SimpleButton x:Name="Add"
                                  Content="Add" Height="35" MinWidth="100"
                                  FontSize="15" Margin="0 0 5 0"
-                                 Visibility="{c:Binding Path=ShowTextFields}" />
+                                 Visibility="{c:Binding Path=!ShowSalesGrid}" />
 
                 <dx:SimpleButton x:Name="Cancel"
                                  Content="Cancel" Height="35" MinWidth="100"
-                                 FontSize="15" Margin="0 0 5 0"
-                                 Visibility="{c:Binding Path=!ShowMemberGrid}"/>
+                                 FontSize="15" Margin="0 0 5 0" />
             </dxlc:LayoutGroup>
         </dxlc:LayoutControl>
     </Grid>
