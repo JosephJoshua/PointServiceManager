@@ -3,7 +3,6 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:converters="clr-namespace:PSMDesktopUI.ValueConverters"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:cal="http://www.caliburnproject.org"
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
     xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
@@ -21,7 +20,8 @@
             <dxlc:LayoutGroup Orientation="Horizontal">
                 <dxlc:LayoutGroup Orientation="Vertical" ItemSpace="4">
                     <dxlc:LayoutItem Label="Nama Pelanggan:" Margin="4">
-                        <dxe:TextEdit x:Name="NamaPelanggan" Margin="10 0 0 0"                        Height="30"
+                        <dxe:TextEdit x:Name="NamaPelanggan" Margin="10 0 0 0"                        
+                                      Height="30"
                                       AllowNullInput="False"
                                       Text="{Binding Path=NamaPelanggan, UpdateSourceTrigger=PropertyChanged}" />
                     </dxlc:LayoutItem>
