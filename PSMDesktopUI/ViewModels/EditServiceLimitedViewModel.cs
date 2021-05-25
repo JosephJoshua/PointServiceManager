@@ -115,6 +115,25 @@ namespace PSMDesktopUI.ViewModels
 
         public async Task<bool> UpdateService()
         {
+            ServiceStatus oldStatus = Enum.GetValues(ServiceStatuses.GetType()).Cast<ServiceStatus>().Where(e => e.Description() ==
+                _oldService.StatusServisan).FirstOrDefault();
+
+            bool wasSudahDiambil = oldStatus == ServiceStatus.JadiSudahDiambil || oldStatus == ServiceStatus.TidakJadiSudahDiambil;
+            bool belumDiambil = SelectedStatus == ServiceStatus.JadiBelumDiambil || SelectedStatus == ServiceStatus.TidakJadiBelumDiambil;
+            bool tidakJadi = SelectedStatus == ServiceStatus.TidakJadiBelumDiambil || SelectedStatus == ServiceStatus.TidakJadiSudahDiambil;
+
+            if (oldStatus == ServiceStatus.JadiSudahDiambil && tidakJadi)
+            {
+                DXMessageBox.Show("Can't update service from 'Jadi (Sudah diambil)' to 'Tidak jadi'", "Edit service");
+                return false;
+            }
+
+            if (wasSudahDiambil && belumDiambil)
+            {
+                DXMessageBox.Show("Can't update service from 'Sudah diambil' to 'Belum diambil'", "Edit service");
+                return false;
+            }
+
             if (SelectedStatus == ServiceStatus.TidakJadiBelumDiambil || SelectedStatus == ServiceStatus.TidakJadiSudahDiambil)
             {
                 if (DXMessageBox.Show("'Biaya' must be 0 if the service is cancelled. Do you want to set 'Biaya' to be 0?", "Edit service",
