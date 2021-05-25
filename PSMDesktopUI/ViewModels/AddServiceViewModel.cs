@@ -472,7 +472,7 @@ namespace PSMDesktopUI.ViewModels
         {
             if ((SelectedStatus == ServiceStatus.TidakJadiSudahDiambil || SelectedStatus == ServiceStatus.TidakJadiBelumDiambil) && Biaya != 0)
             {
-                DXMessageBox.Show("'Biaya' must be 0 if the service is cancelled. Please set 'Biaya' to be 0", "Add service");
+                DXMessageBox.Show("Biaya harus 0 jika servisan ini ingin dibatalkan. Tolong ubah biaya menjadi 0", "Tambah servis");
                 return false;
             }
 

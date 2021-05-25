@@ -37,7 +37,7 @@
         <!-- Title -->
         <TextBlock Grid.Column="0" Grid.Row="0"
                    Grid.ColumnSpan="2"
-                   Text="Services"
+                   Text="Servisan"
                    FontSize="24"
                    Foreground="White"
                    HorizontalAlignment="Center"
@@ -56,7 +56,7 @@
 
             <dxe:TextEdit Grid.Column="0" Grid.Row="0"
                           Margin="0 0 15 0"
-                          NullText="Search.."
+                          NullText="Cari.."
                           Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
                           cal:Message.Attach="[Event KeyDown] = [Action Search($eventArgs)]"/>
 
@@ -67,8 +67,7 @@
                               EditValue="{Binding SelectedSearchType, UpdateSourceTrigger=PropertyChanged}" />
 
             <TextBlock Grid.Column="2" Grid.Row="0"
-                       Text="From:"
-                       FontSize="18"
+                       Text="Dari:"
                        Foreground="White"
                        VerticalAlignment="Center"
                        Margin="15 0 10 0" />
@@ -82,8 +81,7 @@
                           DateTime="{Binding StartDate}" />
 
             <TextBlock Grid.Column="4" Grid.Row="0"
-                       Text="To:"
-                       FontSize="18"
+                       Text="Sampai:"
                        Foreground="White"
                        VerticalAlignment="Center"
                        Margin="15 0 10 0" />
@@ -203,7 +201,7 @@
                                        Margin="32">
 
                         <StackPanel>
-                            <Button ToolTip="Add"
+                            <Button ToolTip="Tambah Servisan"
                                     Background="{DynamicResource PrimaryHueMidBrush}"
                                     Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
                                     IsEnabled="{Binding Path=CanAddService}"
@@ -211,7 +209,7 @@
                                 <material:PackIcon Kind="Add" />
                             </Button>
 
-                            <Button ToolTip="Add Sparepart"
+                            <Button ToolTip="Tambah Sparepart"
                                     Background="{DynamicResource PrimaryHueMidBrush}"
                                     Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
                                     IsEnabled="{Binding Path=CanAddSparepart}"
@@ -237,7 +235,7 @@
                                 <material:PackIcon Kind="Edit" />
                             </Button>
 
-                            <Button ToolTip="Delete"
+                            <Button ToolTip="Hapus Servisan"
                                     Background="{DynamicResource PrimaryHueMidBrush}"
                                     Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
                                     IsEnabled="{Binding Path=CanDeleteService}"
@@ -245,7 +243,7 @@
                                 <material:PackIcon Kind="Delete" />
                             </Button>
 
-                            <Button ToolTip="Delete Sparepart"
+                            <Button ToolTip="Hapus Sparepart"
                                     Background="{DynamicResource PrimaryHueMidBrush}"
                                     Foreground="{DynamicResource PrimaryHueMidForegroundBrush}"
                                     IsEnabled="{Binding Path=CanDeleteSparepart}"
@@ -306,9 +304,9 @@
                         <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TanggalKonfirmasi, StringFormat=Tanggal Konfirmasi: {0}}" />
                         <TextBlock FontSize="14" Text="{Binding Path=SelectedService.IsiKonfirmasi, StringFormat=Isi Konfirmasi: {0}}" />
                         <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Biaya, StringFormat=Biaya: Rp{0:N0}}" />
-                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Discount, StringFormat=Discount: {0}%}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Discount, StringFormat=Diskon: {0}%}" />
                         <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Dp, StringFormat=Dp: Rp{0:N0}}" />
-                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TambahanBiaya, StringFormat=TambahanBiaya: Rp{0:N0}}" />
+                        <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TambahanBiaya, StringFormat=Tambahan Biaya: Rp{0:N0}}" />
                         <TextBlock FontSize="14" Text="{Binding Path=SelectedService.TotalBiaya, StringFormat=Total Biaya: Rp{0:N0}}" />
                         <TextBlock FontSize="14" Text="{Binding Path=SelectedService.HargaSparepart, StringFormat=Harga Sparepart: Rp{0:N0}}" Visibility="{c:Binding Path=!IsCustomerService}" />
                         <TextBlock FontSize="14" Text="{Binding Path=SelectedService.Sisa, StringFormat=Sisa: Rp{0:N0}}" />
@@ -317,10 +315,9 @@
                     </StackPanel>
 
                     <TextBlock Visibility="{c:Binding Path=!ShowInfo}"
-                               FontSize="18"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
-                               Text="No service selected" />
+                               Text="Tidak ada servisan yang di-select" />
                 </Grid>
             </dxlc:LayoutGroup>
         </dxlc:LayoutControl>

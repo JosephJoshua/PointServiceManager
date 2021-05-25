@@ -154,7 +154,7 @@ namespace PSMDesktopUI.ViewModels
 
         public TechnicianReportViewModel(IServiceEndpoint serviceEndpoint, ITechnicianEndpoint technicianEndpoint)
         {
-            DisplayName = "Technician Report";
+            DisplayName = "Laporan Teknisi";
             
             _serviceEndpoint = serviceEndpoint;
             _technicianEndpoint = technicianEndpoint;
@@ -174,7 +174,7 @@ namespace PSMDesktopUI.ViewModels
 
             if (xlApp == null)
             {
-                DXMessageBox.Show("Microsoft Excel is not properly installed");
+                DXMessageBox.Show("Microsoft Excel tidak dapat ditemukan");
                 return;
             }
 

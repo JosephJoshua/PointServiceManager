@@ -97,7 +97,7 @@ namespace PSMDesktopUI.ViewModels
 
         public ProfitReportViewModel(IServiceEndpoint serviceEndpoint)
         {
-            DisplayName = "Profit Report";
+            DisplayName = "Laporan Laba/Rugi";
             _serviceEndpoint = serviceEndpoint;
         }
 
@@ -113,7 +113,7 @@ namespace PSMDesktopUI.ViewModels
 
             if (xlApp == null)
             {
-                DXMessageBox.Show("Microsoft Excel is not properly installed");
+                DXMessageBox.Show("Microsoft Excel tidak dapat ditemukan");
                 return;
             }
 

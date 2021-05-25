@@ -86,7 +86,7 @@ namespace PSMDesktopUI.ViewModels
 
         public SparepartReportViewModel(ISparepartEndpoint sparepartEndpoint)
         {
-            DisplayName = "Sparepart Report";
+            DisplayName = "Laporan Sparepart";
 
             _sparepartEndpoint = sparepartEndpoint;
         }
@@ -103,7 +103,7 @@ namespace PSMDesktopUI.ViewModels
 
             if (xlApp == null)
             {
-                DXMessageBox.Show("Microsoft Excel is not properly installed");
+                DXMessageBox.Show("Microsoft Excel tidak dapat ditemukan");
                 return;
             }
 

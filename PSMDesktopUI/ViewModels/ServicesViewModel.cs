@@ -230,7 +230,7 @@ namespace PSMDesktopUI.ViewModels
                                  ITechnicianEndpoint technicianEndpoint, ISalesEndpoint salesEndpoint,
                                  ISparepartEndpoint sparepartEndpoint)
         {
-            DisplayName = "Services";
+            DisplayName = "Servisan";
 
             _windowManager = windowManager;
             _apiHelper = apiHelper;
@@ -316,7 +316,7 @@ namespace PSMDesktopUI.ViewModels
 
         public async Task DeleteService()
         {
-            if (DXMessageBox.Show("Are you sure you want to delete this service?", "Services", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (DXMessageBox.Show("Apakah anda yakin ingin menghapus servisan ini?", "Servisan", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 await _serviceEndpoint.Delete(SelectedService.NomorNota);
                 await LoadServices();
@@ -325,7 +325,7 @@ namespace PSMDesktopUI.ViewModels
 
         public async Task DeleteSparepart()
         {
-            if (DXMessageBox.Show("Are you sure you want to delete this sparepart?", "Services", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (DXMessageBox.Show("Apakah anda yakin ingin menghapus sparepart ini?", "Servisan", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 await _sparepartEndpoint.Delete(SelectedSparepart.Id);
                 await LoadServices();

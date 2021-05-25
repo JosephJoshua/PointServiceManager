@@ -12,8 +12,6 @@ namespace PSMDesktopUI.ViewModels
 {
     public class EditServiceViewModel : Screen
     {
-        private readonly IWindowManager _windowManager;
-
         private readonly IServiceEndpoint _serviceEndpoint;
         private readonly ITechnicianEndpoint _technicianEndpoint;
 
@@ -362,9 +360,8 @@ namespace PSMDesktopUI.ViewModels
             get => !string.IsNullOrWhiteSpace(NamaPelanggan) && !string.IsNullOrWhiteSpace(TipeHp) && !string.IsNullOrWhiteSpace(Kerusakan);
         }
 
-        public EditServiceViewModel(IWindowManager windowManager, ITechnicianEndpoint technicianEndpoint, IServiceEndpoint serviceEndpoint)
+        public EditServiceViewModel(ITechnicianEndpoint technicianEndpoint, IServiceEndpoint serviceEndpoint)
         {
-            _windowManager = windowManager;
             _serviceEndpoint = serviceEndpoint;
             _technicianEndpoint = technicianEndpoint;
         }
@@ -463,7 +460,7 @@ namespace PSMDesktopUI.ViewModels
             if (tidakJadi && (Biaya != 0 || TambahanBiaya != 0))
             {
                 DXMessageBox.Show(
-                    "'Biaya' and 'Tambahan biaya' must be 0 if the service is cancelled. Please set 'Biaya' and 'Tambahan biaya' to be 0",
+                    "Biaya dan tambahan biaya harus 0 jika servisan ini ingin dibatalkan. Tolong ubah biaya dan tambahan biaya menjadi 0",
                     "Edit service"
                 );
 

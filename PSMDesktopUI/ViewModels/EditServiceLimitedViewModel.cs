@@ -176,20 +176,20 @@ namespace PSMDesktopUI.ViewModels
 
             if (oldStatus == ServiceStatus.JadiSudahDiambil && tidakJadi)
             {
-                DXMessageBox.Show("Can't update service from 'Jadi (Sudah diambil)' to 'Tidak jadi'", "Edit service");
+                DXMessageBox.Show("Tidak bisa mengubah servisan dari 'Jadi (Sudah diambil)' menjadi 'Tidak jadi'", "Edit servisan");
                 return false;
             }
 
             if (wasSudahDiambil && belumDiambil)
             {
-                DXMessageBox.Show("Can't update service from 'Sudah diambil' to 'Belum diambil'", "Edit service");
+                DXMessageBox.Show("Tidak bisa mengubah servisan dari 'Sudah diambil' menjadi 'Belum diambil'", "Edit servisan");
                 return false;
             }
 
             if (tidakJadi && (_oldService.Biaya != 0 || TambahanBiaya != 0))
             {
                 if (DXMessageBox.Show(
-                    "'Biaya' and 'Tambahan biaya' must be 0 if the service is cancelled. Do you want to set 'Biaya' and 'Tambahan biaya' to be 0?", "Edit service",
+                    "Biaya dan tambahan biaya harus 0 jika servisan ini ingin dibatalkan. Apakah anda ingin mengubahnya menjadi 0 secara otomatis?", "Edit service",
                     MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     _oldService.Biaya = 0;

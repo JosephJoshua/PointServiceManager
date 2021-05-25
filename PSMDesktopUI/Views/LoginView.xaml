@@ -12,7 +12,7 @@
     ShowInTaskbar="False"
     ResizeMode="NoResize"
     WindowStartupLocation="CenterOwner"
-    Title="Service Manager"
+    Title="Servisan Manager"
     Height="240" Width="475">
 
     <Grid>
