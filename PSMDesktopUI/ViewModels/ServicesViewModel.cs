@@ -193,7 +193,7 @@ namespace PSMDesktopUI.ViewModels
 
         public bool CanDeleteService
         {
-            get => !IsBuyer && !IsLoading && SelectedService != null;
+            get => IsAdmin && !IsLoading && SelectedService != null;
         }
 
         public bool CanDeleteSparepart
@@ -290,8 +290,6 @@ namespace PSMDesktopUI.ViewModels
 
         public async Task EditService()
         {
-            if (IsCustomerService && !AskForCSPassword()) return;
-
             ServiceModel service = SelectedService;
 
             EditServiceViewModel editServiceVM = IoC.Get<EditServiceViewModel>();
@@ -318,8 +316,6 @@ namespace PSMDesktopUI.ViewModels
 
         public async Task DeleteService()
         {
-            if (IsCustomerService && !AskForCSPassword()) return;
-
             if (DXMessageBox.Show("Are you sure you want to delete this service?", "Services", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 await _serviceEndpoint.Delete(SelectedService.NomorNota);
@@ -404,11 +400,6 @@ namespace PSMDesktopUI.ViewModels
             });
 
             _windowManager.ShowDialog(invoicePreviewVM);
-        }
-
-        private bool AskForCSPassword()
-        {
-            return _windowManager.ShowDialog(IoC.Get<CSPasswordViewModel>()) == true;
         }
     }
 }

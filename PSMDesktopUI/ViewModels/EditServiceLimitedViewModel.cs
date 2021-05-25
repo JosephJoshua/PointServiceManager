@@ -51,11 +51,6 @@ namespace PSMDesktopUI.ViewModels
 
             set
             {
-                if (value == ServiceStatus.TidakJadiBelumDiambil || value == ServiceStatus.TidakJadiSudahDiambil)
-                {
-                    if (!AskForCSPassword()) return;
-                }
-
                 _selectedStatus = value;
                 NotifyOfPropertyChange(() => SelectedStatus);
             }
@@ -147,11 +142,6 @@ namespace PSMDesktopUI.ViewModels
         public void Cancel()
         {
             TryClose(false);
-        }
-
-        private bool AskForCSPassword()
-        {
-            return _windowManager.ShowDialog(IoC.Get<CSPasswordViewModel>()) == true;
         }
     }
 }
