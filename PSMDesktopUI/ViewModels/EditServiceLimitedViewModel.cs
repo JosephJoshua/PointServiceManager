@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PSMDesktopUI.ViewModels
 {
-    public class EditStatusViewModel : Screen
+    public class EditServiceLimitedViewModel : Screen
     {
         private readonly IWindowManager _windowManager;
         private readonly IServiceEndpoint _serviceEndpoint;
@@ -99,7 +99,7 @@ namespace PSMDesktopUI.ViewModels
             }
         }
 
-        public EditStatusViewModel(IWindowManager windowManager, IServiceEndpoint serviceEndpoint)
+        public EditServiceLimitedViewModel(IWindowManager windowManager, IServiceEndpoint serviceEndpoint)
         {
             _windowManager = windowManager;
             _serviceEndpoint = serviceEndpoint;

@@ -200,7 +200,7 @@
     <Compile Include="ViewModels\AddTechnicianViewModel.cs" />
     <Compile Include="ViewModels\CSPasswordViewModel.cs" />
     <Compile Include="ViewModels\EditServiceViewModel.cs" />
-    <Compile Include="ViewModels\EditStatusViewModel.cs" />
+    <Compile Include="ViewModels\EditServiceLimitedViewModel.cs" />
     <Compile Include="ViewModels\ProfitReportViewModel.cs" />
     <Compile Include="ViewModels\SalesViewModel.cs" />
     <Compile Include="ViewModels\ServiceInvoicePreviewViewModel.cs" />
@@ -229,8 +229,8 @@
     <Compile Include="Views\EditServiceView.xaml.cs">
       <DependentUpon>EditServiceView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\EditStatusView.xaml.cs">
-      <DependentUpon>EditStatusView.xaml</DependentUpon>
+    <Compile Include="Views\EditServiceLimitedView.xaml.cs">
+      <DependentUpon>EditServiceLimitedView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
@@ -328,7 +328,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\EditStatusView.xaml">
+    <Page Include="Views\EditServiceLimitedView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

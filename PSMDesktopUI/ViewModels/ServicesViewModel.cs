@@ -303,14 +303,14 @@ namespace PSMDesktopUI.ViewModels
             }
         }
 
-        public async Task EditStatus()
+        public async Task EditServiceLimited()
         {
             ServiceModel service = SelectedService;
 
-            EditStatusViewModel editStatusVM = IoC.Get<EditStatusViewModel>();
-            editStatusVM.SetFieldValues(service);
+            EditServiceLimitedViewModel editServiceVM = IoC.Get<EditServiceLimitedViewModel>();
+            editServiceVM.SetFieldValues(service);
 
-            if (_windowManager.ShowDialog(editStatusVM) == true)
+            if (_windowManager.ShowDialog(editServiceVM) == true)
             {
                 await LoadServices();
             }
