@@ -5,6 +5,7 @@ using PSMDesktopUI.Library.Models;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace PSMDesktopUI.ViewModels
 {
@@ -116,8 +117,15 @@ namespace PSMDesktopUI.ViewModels
         {
             if (SelectedStatus == ServiceStatus.TidakJadiBelumDiambil || SelectedStatus == ServiceStatus.TidakJadiSudahDiambil)
             {
-                DXMessageBox.Show("'Biaya' must be 0 if the service is cancelled. Please edit the service and set 'Biaya' to be 0", "Edit service");
-                return false;
+                if (DXMessageBox.Show("'Biaya' must be 0 if the service is cancelled. Do you want to set 'Biaya' to be 0?", "Edit service",
+                    MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    _oldService.Biaya = 0;
+                }
+                else
+                {
+                    return false;
+                }
             }
 
             bool sudahDiambil = SelectedStatus == ServiceStatus.JadiSudahDiambil || SelectedStatus == ServiceStatus.TidakJadiSudahDiambil;
