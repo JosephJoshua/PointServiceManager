@@ -458,9 +458,15 @@ namespace PSMDesktopUI.ViewModels
 
         public async Task<bool> UpdateService()
         {
-            if ((SelectedStatus == ServiceStatus.TidakJadiBelumDiambil || SelectedStatus == ServiceStatus.TidakJadiSudahDiambil) && Biaya != 0)
+            bool tidakJadi = SelectedStatus == ServiceStatus.TidakJadiBelumDiambil || SelectedStatus == ServiceStatus.TidakJadiSudahDiambil;
+
+            if (tidakJadi && (Biaya != 0 || TambahanBiaya != 0))
             {
-                DXMessageBox.Show("'Biaya' must be 0 if the service is cancelled. Please set 'Biaya' to be 0", "Edit service");
+                DXMessageBox.Show(
+                    "'Biaya' and 'Tambahan biaya' must be 0 if the service is cancelled. Please set 'Biaya' and 'Tambahan biaya' to be 0",
+                    "Edit service"
+                );
+
                 return false;
             }
 

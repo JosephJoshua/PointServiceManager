@@ -134,12 +134,14 @@ namespace PSMDesktopUI.ViewModels
                 return false;
             }
 
-            if (SelectedStatus == ServiceStatus.TidakJadiBelumDiambil || SelectedStatus == ServiceStatus.TidakJadiSudahDiambil)
+            if (tidakJadi && (_oldService.Biaya != 0 || _oldService.TambahanBiaya != 0))
             {
-                if (DXMessageBox.Show("'Biaya' must be 0 if the service is cancelled. Do you want to set 'Biaya' to be 0?", "Edit service",
+                if (DXMessageBox.Show(
+                    "'Biaya' and 'Tambahan biaya' must be 0 if the service is cancelled. Do you want to set 'Biaya' and 'Tambahan biaya' to be 0?", "Edit service",
                     MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     _oldService.Biaya = 0;
+                    _oldService.TambahanBiaya = 0;
                 }
                 else
                 {
