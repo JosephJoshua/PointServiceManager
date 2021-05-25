@@ -510,7 +510,7 @@ namespace PSMDesktopUI.ViewModels
                 TechnicianId = SelectedTechnician.Id,
                 StatusServisan = SelectedStatus.Description(),
                 TanggalKonfirmasi = SudahKonfirmasi ? TanggalKonfirmasi : DateTime.MinValue,
-                IsiKonfirmasi = IsiKonfirmasi,
+                IsiKonfirmasi = SudahKonfirmasi ? IsiKonfirmasi : "",
                 Biaya = (decimal)Biaya,
                 Discount = Discount,
                 Dp = (decimal)Dp,

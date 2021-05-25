@@ -206,7 +206,7 @@ namespace PSMDesktopUI.ViewModels
             _oldService.Kerusakan = Kerusakan;
             _oldService.NoHp = NoHp;
             _oldService.StatusServisan = SelectedStatus.Description();
-            _oldService.IsiKonfirmasi = IsiKonfirmasi;
+            _oldService.IsiKonfirmasi = SudahKonfirmasi ? IsiKonfirmasi : "";
             _oldService.TanggalKonfirmasi = SudahKonfirmasi ? TanggalKonfirmasi : DateTime.MinValue;
             _oldService.TanggalPengambilan = sudahDiambil ? DateTime.Now : DateTime.MinValue;
             _oldService.Dp = (decimal)Dp;
