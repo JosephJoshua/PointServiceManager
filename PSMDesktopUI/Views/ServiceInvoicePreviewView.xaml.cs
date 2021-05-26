@@ -28,11 +28,11 @@ namespace PSMDesktopUI.Views
             ReportDocument report = new ReportDocument();
             report.Load(reportPath);
 
-            if (_invoiceModel.NoHp == null) _invoiceModel.NoHp = "";
-            if (_invoiceModel.Imei == null) _invoiceModel.Imei = "";
-            if (_invoiceModel.Kelengkapan == null) _invoiceModel.Kelengkapan = "";
-            if (_invoiceModel.YangBelumDicek == null) _invoiceModel.YangBelumDicek = "";
-            if (_invoiceModel.KondisiHp == null) _invoiceModel.KondisiHp = "";
+            if (_invoiceModel.NoHp == null) _invoiceModel.NoHp = " ";
+            if (_invoiceModel.Imei == null) _invoiceModel.Imei = " ";
+            if (_invoiceModel.Kelengkapan == null) _invoiceModel.Kelengkapan = " ";
+            if (_invoiceModel.YangBelumDicek == null) _invoiceModel.YangBelumDicek = " ";
+            if (_invoiceModel.KondisiHp == null) _invoiceModel.KondisiHp = " ";
 
             report.SetParameterValue("NomorNota", _invoiceModel.NomorNota);
             report.SetParameterValue("NamaPelanggan", _invoiceModel.NamaPelanggan);
