@@ -377,9 +377,22 @@ namespace PSMDesktopUI.ViewModels
         {
             if (SelectedService == null) return;
 
-            string kelengkapan = SelectedService.Kelengkapan.Trim().Replace(" ", ", ");
+            string kelengkapan = SelectedService.Kelengkapan?.Trim().Replace(" ", ", ");
 
-            kelengkapan = kelengkapan[0].ToString() + kelengkapan.Substring(1).ToLower();
+            if (!string.IsNullOrWhiteSpace(kelengkapan) && kelengkapan.Length > 1)
+            {
+                kelengkapan = kelengkapan[0].ToString() + kelengkapan.Substring(1).ToLower();
+
+                // Make "SIM" uppercase so it looks better; there's probably a more efficient way of doing this but I don't care.
+                for (int i = 0; i < kelengkapan.Length; i++)
+                {
+                    if (kelengkapan[i].ToString().ToLower() == "s" && kelengkapan.Length - i - 1 >= 2 && kelengkapan[i + 1] == 'i' &&
+                        kelengkapan[i + 2] == 'm')
+                    {
+                        kelengkapan = kelengkapan.Substring(0, i) + "SIM" + kelengkapan.Substring(i + 3);
+                    }
+                }
+            }
 
             ServiceInvoicePreviewViewModel invoicePreviewVM = IoC.Get<ServiceInvoicePreviewViewModel>();
             invoicePreviewVM.SetInvoiceModel(new ServiceInvoiceModel
@@ -388,7 +401,7 @@ namespace PSMDesktopUI.ViewModels
                 NamaPelanggan = SelectedService.NamaPelanggan,
                 NoHp = SelectedService.NoHp,
                 TipeHp = SelectedService.TipeHp,
-                Imei = SelectedService.Imei ?? "",
+                Imei = SelectedService.Imei,
                 Kerusakan = SelectedService.Kerusakan,
                 TotalBiaya = SelectedService.TotalBiaya,
                 Dp = SelectedService.Dp,
@@ -396,7 +409,7 @@ namespace PSMDesktopUI.ViewModels
                 Kelengkapan = kelengkapan,
                 KondisiHp = SelectedService.KondisiHp,
                 YangBelumDicek = SelectedService.YangBelumDicek,
-                Tanggal = SelectedService.Tanggal.ToString("f", DateTimeFormatInfo.InvariantInfo),
+                Tanggal = SelectedService.Tanggal.ToString("f", DateTimeFormatInfo.CurrentInfo),
             });
 
             _windowManager.ShowDialog(invoicePreviewVM);
