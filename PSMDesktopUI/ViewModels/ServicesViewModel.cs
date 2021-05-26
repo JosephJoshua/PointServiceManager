@@ -385,7 +385,15 @@ namespace PSMDesktopUI.ViewModels
                 serviceList = serviceList.Where(s => s.Tanggal >= StartDate && s.Tanggal <= EndDate).ToList();
             }
 
-            Services = new BindableCollection<ServiceModel>(serviceList);
+            // Don't unnecessarily update the grid if the collections are the same.
+            var serviceCollection = new BindableCollection<ServiceModel>(serviceList);
+            if (Services != null && serviceCollection.SequenceEqual(Services))
+            {
+                IsLoading = false;
+                return;
+            }
+
+            Services = serviceCollection;
             IsLoading = false;
 
             OnRefresh?.Invoke();
