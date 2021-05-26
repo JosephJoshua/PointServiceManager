@@ -4,11 +4,9 @@ using PSMDesktopUI.Library.Api;
 using PSMDesktopUI.Library.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace PSMDesktopUI.ViewModels
@@ -160,19 +158,11 @@ namespace PSMDesktopUI.ViewModels
             if (IsLoading) return;
 
             IsLoading = true;
-            List<SparepartModel> sparepartList = await _sparepartEndpoint.GetAll();
-            List<SparepartModel> filteredList = new List<SparepartModel>();
+            List<SparepartModel> sparepartList = (await _sparepartEndpoint.GetAll())
+                .Where(s => s.TanggalPembelian >= StartDate.Date && s.TanggalPembelian.Date <= EndDate.Date).ToList();
 
-            foreach (SparepartModel sparepart in sparepartList)
-            {
-                if (sparepart.TanggalPembelian.Date >= StartDate.Date && sparepart.TanggalPembelian.Date <= EndDate.Date)
-                {
-                    filteredList.Add(sparepart);
-                }
-            }
-
+            Spareparts = new BindableCollection<SparepartModel>(sparepartList);
             IsLoading = false;
-            Spareparts = new BindableCollection<SparepartModel>(filteredList);
         }
     }
 }

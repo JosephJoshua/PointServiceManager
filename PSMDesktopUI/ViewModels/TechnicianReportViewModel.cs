@@ -4,7 +4,6 @@ using PSMDesktopUI.Library.Api;
 using PSMDesktopUI.Library.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -267,8 +266,10 @@ namespace PSMDesktopUI.ViewModels
 
             IsLoading = true;
 
-            List<TechnicianResultModel> resultList = (await _serviceEndpoint.GetAll()).Where((s) => s.TechnicianId == SelectedTechnician.Id && 
-                (s.StatusServisan == "Jadi (Sudah diambil)" || s.StatusServisan == "Tidak Jadi (Sudah diambil)"))
+            List<TechnicianResultModel> resultList = (await _serviceEndpoint.GetAll())
+                .Where(s => s.TechnicianId == SelectedTechnician.Id)
+                .Where(s => s.StatusServisan == "Jadi (Sudah diambil)" || s.StatusServisan == "Tidak Jadi (Sudah diambil)")
+                .Where(s => s.TanggalPengambilan.Date >= StartDate.Date && s.TanggalPengambilan.Date <= EndDate.Date)
                 .Select(s => new TechnicianResultModel
                 {
                     NomorNota = s.NomorNota,
@@ -281,18 +282,8 @@ namespace PSMDesktopUI.ViewModels
                     NamaTeknisi = Technicians.SingleOrDefault(t => t.Id == s.TechnicianId).Nama
                 }).ToList();
 
-            List<TechnicianResultModel> filteredResultList = new List<TechnicianResultModel>();
-
-            foreach (TechnicianResultModel result in resultList)
-            {
-                if (result.TanggalPengambilan.Date >= StartDate.Date && result.TanggalPengambilan.Date <= EndDate.Date)
-                {
-                    filteredResultList.Add(result);
-                }
-            }
-
+            TechnicianResults = new BindableCollection<TechnicianResultModel>(resultList);
             IsLoading = false;
-            TechnicianResults = new BindableCollection<TechnicianResultModel>(filteredResultList);
         }
     }
 }
