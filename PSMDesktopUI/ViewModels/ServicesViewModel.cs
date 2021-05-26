@@ -238,6 +238,12 @@ namespace PSMDesktopUI.ViewModels
             _technicianEndpoint = technicianEndpoint;
             _salesEndpoint = salesEndpoint;
             _sparepartEndpoint = sparepartEndpoint;
+
+            DateTime today = DateTime.Today;
+
+            // Set start and end date to the start and end of the month, respectively.
+            _startDate = new DateTime(today.Year, today.Month, 1);
+            _endDate = _startDate.AddMonths(1).AddTicks(-1);
         }
 
         protected override async void OnViewLoaded(object view)
@@ -337,6 +343,12 @@ namespace PSMDesktopUI.ViewModels
             if (IsLoading) return;
 
             IsLoading = true;
+
+            // Make sure the start date's time is set to the start of the day (at 00:00:00).
+            StartDate = StartDate.Date;
+
+            // Make sure the end date's time is set to the end of the day (at 23:59:59).
+            EndDate = EndDate.AddDays(1).AddTicks(-1);
 
             List<ServiceModel> serviceList = await _serviceEndpoint.GetAll();
             if (!string.IsNullOrWhiteSpace(SearchText))
