@@ -408,6 +408,7 @@ namespace PSMDesktopUI.ViewModels
                         kelengkapan[i + 2] == 'm')
                     {
                         kelengkapan = kelengkapan.Substring(0, i) + "SIM" + kelengkapan.Substring(i + 3);
+                        break;
                     }
                 }
             }
