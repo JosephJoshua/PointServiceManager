@@ -348,9 +348,10 @@ namespace PSMDesktopUI.ViewModels
             StartDate = StartDate.Date;
 
             // Make sure the end date's time is set to the end of the day (at 23:59:59).
-            EndDate = EndDate.AddDays(1).AddTicks(-1);
+            EndDate = EndDate.Date.AddDays(1).AddTicks(-1);
 
             List<ServiceModel> serviceList = await _serviceEndpoint.GetAll();
+
             if (!string.IsNullOrWhiteSpace(SearchText))
             {
                 string searchText = SearchText.ToLower();
@@ -377,6 +378,11 @@ namespace PSMDesktopUI.ViewModels
                         serviceList = serviceList.Where(s => s.StatusServisan.ToLower().Contains(searchText)).ToList();
                         break;
                 }
+            }
+            else
+            {
+                // Only filter servisan based on the date range if the user isn't searching.
+                serviceList = serviceList.Where(s => s.Tanggal >= StartDate && s.Tanggal <= EndDate).ToList();
             }
 
             Services = new BindableCollection<ServiceModel>(serviceList);
