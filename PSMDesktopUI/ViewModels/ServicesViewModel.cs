@@ -436,7 +436,7 @@ namespace PSMDesktopUI.ViewModels
                 Kelengkapan = kelengkapan,
                 KondisiHp = SelectedService.KondisiHp,
                 YangBelumDicek = SelectedService.YangBelumDicek,
-                Tanggal = SelectedService.Tanggal.ToString("f", DateTimeFormatInfo.CurrentInfo),
+                Tanggal = SelectedService.Tanggal.ToString(DateTimeFormatInfo.CurrentInfo.LongDatePattern),
             });
 
             _windowManager.ShowDialog(invoicePreviewVM);
