@@ -189,7 +189,8 @@ namespace PSMDesktopUI.ViewModels
             if (tidakJadi && (_oldService.Biaya != 0 || TambahanBiaya != 0))
             {
                 if (DXMessageBox.Show(
-                    "Biaya dan tambahan biaya harus 0 jika servisan ini ingin dibatalkan. Apakah anda ingin mengubahnya menjadi 0 secara otomatis?", "Edit service",
+                    "Biaya dan tambahan biaya harus 0 jika servisan ini ingin dibatalkan. Apakah anda ingin mengubahnya menjadi 0 secara otomatis?",
+                    "Edit servisan",
                     MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     _oldService.Biaya = 0;
