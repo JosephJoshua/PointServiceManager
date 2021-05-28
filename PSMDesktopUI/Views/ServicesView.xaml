@@ -143,7 +143,7 @@
                             </dxg:DataControlDetailDescriptor>
                         </dxg:GridControl.DetailDescriptor>
 
-                        <dxg:GridColumn Header="No. Nota" FieldName="NomorNota">
+                        <dxg:GridColumn Header="No. Nota" FieldName="NomorNota" SortIndex="0" SortOrder="Descending">
                             <dxg:GridColumn.EditSettings>
                                 <dxe:TextEditSettings HorizontalContentAlignment="Left" />
                             </dxg:GridColumn.EditSettings>
