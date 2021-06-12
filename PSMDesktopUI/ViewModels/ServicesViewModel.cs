@@ -322,7 +322,9 @@ namespace PSMDesktopUI.ViewModels
 
         public async Task DeleteService()
         {
-            if (DXMessageBox.Show("Apakah anda yakin ingin menghapus servisan ini?", "Servisan", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (DXMessageBox.Show("Apakah anda yakin ingin menghapus servisan ini?", "Servisan", MessageBoxButton.YesNo) == MessageBoxResult.Yes &&
+                DXMessageBox.Show("Apakah anda YAKIN ingin menghapus servisan ini?", "Servisan", MessageBoxButton.YesNo) == MessageBoxResult.Yes &&
+                DXMessageBox.Show("Apakah anda SANGAT YAKIN ingin menghapus servisan ini?", "Servisan", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 await _serviceEndpoint.Delete(SelectedService.NomorNota);
                 await LoadServices();
