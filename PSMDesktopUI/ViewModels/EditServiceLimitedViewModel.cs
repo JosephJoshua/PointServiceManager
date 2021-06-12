@@ -144,6 +144,11 @@ namespace PSMDesktopUI.ViewModels
             }
         }
 
+        public bool CanSave
+        {
+            get => !string.IsNullOrWhiteSpace(Kerusakan);
+        }
+
         public EditServiceLimitedViewModel(IServiceEndpoint serviceEndpoint)
         {
             _serviceEndpoint = serviceEndpoint;

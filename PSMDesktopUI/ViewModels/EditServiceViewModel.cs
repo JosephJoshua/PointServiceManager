@@ -455,13 +455,19 @@ namespace PSMDesktopUI.ViewModels
 
         public async Task<bool> UpdateService()
         {
+            if (Discount < 0 || Discount > 100)
+            {
+                DXMessageBox.Show("Discount harus di antara 0 sampai 100", "Edit servisan");
+                return false;
+            }
+
             bool tidakJadi = SelectedStatus == ServiceStatus.TidakJadiBelumDiambil || SelectedStatus == ServiceStatus.TidakJadiSudahDiambil;
 
             if (tidakJadi && (Biaya != 0 || TambahanBiaya != 0))
             {
                 DXMessageBox.Show(
                     "Biaya dan tambahan biaya harus 0 jika servisan ini ingin dibatalkan. Tolong ubah biaya dan tambahan biaya menjadi 0",
-                    "Edit service"
+                    "Edit servisan"
                 );
 
                 return false;
