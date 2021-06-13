@@ -6,6 +6,8 @@ namespace PSMDesktopUI.Views
 {
     public partial class ServicesView : UserControl
     {
+        private bool _isFirstLoad = true;
+
         public ServicesView()
         {
             InitializeComponent();
@@ -22,10 +24,9 @@ namespace PSMDesktopUI.Views
             }
         }
 
-        private void SetGridWidth()
+        private void SetInitialGridWidth()
         {
             double lcWidth = MainLayoutControl.ActualWidth;
-
             GridLayoutGroup.Width = lcWidth * 0.7d;
         }
 
@@ -34,7 +35,12 @@ namespace PSMDesktopUI.Views
             ServicesViewModel vm = (ServicesViewModel)DataContext;
             vm.OnRefresh += OnRefresh;
 
-            SetGridWidth();
+            if (_isFirstLoad)
+            {
+                SetInitialGridWidth();
+            }
+
+            _isFirstLoad = true;
         }
     }
 }

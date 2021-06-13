@@ -177,11 +177,12 @@
 
                         <dxg:GridControl.View>
                             <dxg:TableView x:Name="MasterView"
-                               DetailHeaderContent="Services"
-                               AllowScrollAnimation="True"
-                               AllowFixedGroups="True"
-                               AllowEditing="False" 
-                               AllowMasterDetail="{c:Binding Path=!IsCustomerService}"/>
+                                           DetailHeaderContent="Services"
+                                           AllowScrollAnimation="True"
+                                           AllowFixedGroups="True"
+                                           AllowEditing="False" 
+                                           AllowMasterDetail="{c:Binding Path=!IsCustomerService}"
+                                           AllowScrollToFocusedRow="True" />
                         </dxg:GridControl.View>
 
                         <i:Interaction.Triggers>
