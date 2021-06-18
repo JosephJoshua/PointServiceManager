@@ -53,9 +53,9 @@ namespace PSMDataManager.Controllers
             }
 
             ServiceData data = new ServiceData();
-            data.InsertService(service);
+            int nomorNota = data.InsertService(service);
 
-            return Ok();
+            return Ok(nomorNota);
         }
 
         [HttpPut]

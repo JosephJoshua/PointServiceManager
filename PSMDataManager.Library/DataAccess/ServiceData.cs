@@ -1,6 +1,8 @@
-﻿using PSMDataManager.Library.Internal.DataAccess;
+﻿using Dapper;
+using PSMDataManager.Library.Internal.DataAccess;
 using PSMDataManager.Library.Models;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 
 namespace PSMDataManager.Library.DataAccess
@@ -11,7 +13,7 @@ namespace PSMDataManager.Library.DataAccess
         {
             SqlDataAccess sql = new SqlDataAccess();
 
-            var data = sql.LoadData<ServiceModel, dynamic>("dbo.spGetAllServices", new { }, "PSMData");
+            List<ServiceModel> data = sql.LoadData<ServiceModel, dynamic>("dbo.spGetAllServices", new { }, "PSMData");
             return data;
         }
 
@@ -23,10 +25,12 @@ namespace PSMDataManager.Library.DataAccess
             return service;
         }
 
-        public void InsertService(ServiceModel service)
+        public int InsertService(ServiceModel service)
         {
             SqlDataAccess sql = new SqlDataAccess();
-            var p = new
+            const string nomorNotaCol = "NomorNota";
+
+            var p = new 
             {
                 service.NamaPelanggan,
                 service.NoHp,
@@ -51,7 +55,13 @@ namespace PSMDataManager.Library.DataAccess
                 service.TanggalPengambilan
             };
 
-            sql.SaveData<dynamic>("dbo.spInsertService", p, "PSMData");
+            DynamicParameters parameters = new DynamicParameters();
+
+            parameters.Add(nomorNotaCol, dbType: DbType.Int32, direction: ParameterDirection.Output);
+            parameters.AddDynamicParams(p);
+
+            sql.SaveData("dbo.spInsertService", parameters, "PSMData");
+            return parameters.Get<int>(nomorNotaCol);
         }
 
         public void UpdateService(ServiceModel service)

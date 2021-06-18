@@ -11,7 +11,7 @@ namespace PSMDataManager.Library.DataAccess
         {
             SqlDataAccess sql = new SqlDataAccess();
 
-            var data = sql.LoadData<SalesModel, dynamic>("dbo.spGetAllSales", new { }, "PSMData");
+            List<SalesModel> data = sql.LoadData<SalesModel, dynamic>("dbo.spGetAllSales", new { }, "PSMData");
             return data;
         }
 
