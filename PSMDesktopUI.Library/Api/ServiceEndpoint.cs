@@ -47,9 +47,26 @@ namespace PSMDesktopUI.Library.Api
             }
         }
 
-        public async Task Insert(ServiceModel service)
+        public async Task<int> Insert(ServiceModel service)
         {
-            await _apiHelper.ApiClient.PostAsJsonAsync("/api/Service", service).ConfigureAwait(false);
+            using (HttpResponseMessage response = await _apiHelper.ApiClient.PostAsJsonAsync("/api/Service", service).ConfigureAwait(false))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseContent = await response.Content.ReadAsStringAsync();
+
+                    if (!int.TryParse(responseContent, out int nomorNota))
+                    {
+                        throw new Exception("Unexpected API response: " + responseContent + "\nExpected nomor nota as int");
+                    }
+
+                    return nomorNota;
+                }
+                else
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+            }
         }
 
         public async Task Update(ServiceModel service)

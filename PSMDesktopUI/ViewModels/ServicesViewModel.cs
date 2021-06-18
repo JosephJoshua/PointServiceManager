@@ -277,6 +277,13 @@ namespace PSMDesktopUI.ViewModels
 
             if (_windowManager.ShowDialog(addServiceVM) == true)
             {
+                if (addServiceVM.NomorNota != -1 &&
+                    DXMessageBox.Show("Apakah anda ingin mencetak servisan ini?", "Tambah servisan", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    ServiceModel newService = await _serviceEndpoint.GetByNomorNota(addServiceVM.NomorNota);
+                    PrintService(newService);
+                }
+
                 await LoadServices();
             }
         }
@@ -401,11 +408,15 @@ namespace PSMDesktopUI.ViewModels
             OnRefresh?.Invoke();
         }
 
-        public void PrintService()
+        public void PrintSelectedService()
         {
             if (SelectedService == null) return;
+            PrintService(SelectedService);
+        }
 
-            string kelengkapan = SelectedService.Kelengkapan?.Trim().Replace(" ", ", ");
+        private void PrintService(ServiceModel service)
+        {
+            string kelengkapan = service.Kelengkapan?.Trim().Replace(" ", ", ");
 
             if (!string.IsNullOrWhiteSpace(kelengkapan) && kelengkapan.Length > 1)
             {
@@ -426,19 +437,19 @@ namespace PSMDesktopUI.ViewModels
             ServiceInvoicePreviewViewModel invoicePreviewVM = IoC.Get<ServiceInvoicePreviewViewModel>();
             invoicePreviewVM.SetInvoiceModel(new ServiceInvoiceModel
             {
-                NomorNota = SelectedService.NomorNota.ToString(),
-                NamaPelanggan = SelectedService.NamaPelanggan,
-                NoHp = SelectedService.NoHp,
-                TipeHp = SelectedService.TipeHp,
-                Imei = SelectedService.Imei,
-                Kerusakan = SelectedService.Kerusakan,
-                TotalBiaya = SelectedService.TotalBiaya,
-                Dp = SelectedService.Dp,
-                Sisa = SelectedService.Sisa,
+                NomorNota = service.NomorNota.ToString(),
+                NamaPelanggan = service.NamaPelanggan,
+                NoHp = service.NoHp,
+                TipeHp = service.TipeHp,
+                Imei = service.Imei,
+                Kerusakan = service.Kerusakan,
+                TotalBiaya = service.TotalBiaya,
+                Dp = service.Dp,
+                Sisa = service.Sisa,
                 Kelengkapan = kelengkapan,
-                KondisiHp = SelectedService.KondisiHp,
-                YangBelumDicek = SelectedService.YangBelumDicek,
-                Tanggal = SelectedService.Tanggal.ToString(DateTimeFormatInfo.CurrentInfo.LongDatePattern),
+                KondisiHp = service.KondisiHp,
+                YangBelumDicek = service.YangBelumDicek,
+                Tanggal = service.Tanggal.ToString(DateTimeFormatInfo.CurrentInfo.LongDatePattern),
             });
 
             _windowManager.ShowDialog(invoicePreviewVM);

@@ -9,7 +9,7 @@ namespace PSMDesktopUI.Library.Api
         Task Delete(int id);
         Task<List<ServiceModel>> GetAll();
         Task<ServiceModel> GetByNomorNota(int nomorNota);
-        Task Insert(ServiceModel service);
+        Task<int> Insert(ServiceModel service);
         Task Update(ServiceModel service);
     }
 }
