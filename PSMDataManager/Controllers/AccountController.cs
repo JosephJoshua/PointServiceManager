@@ -318,8 +318,8 @@ namespace PSMDataManager.Controllers
         }
 
         // POST api/Account/Register
-        [AllowAnonymous]
         [Route("Register")]
+        [Authorize(Roles = "Admin")]
         public async Task<IHttpActionResult> Register(RegisterBindingModel model)
         {
             if (!ModelState.IsValid)
@@ -367,7 +367,7 @@ namespace PSMDataManager.Controllers
             result = await UserManager.AddLoginAsync(user.Id, info.Login);
             if (!result.Succeeded)
             {
-                return GetErrorResult(result); 
+                return GetErrorResult(result);
             }
             return Ok();
         }

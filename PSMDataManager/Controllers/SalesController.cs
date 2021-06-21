@@ -26,6 +26,7 @@ namespace PSMDataManager.Controllers
 
         [HttpPost]
         [Route("api/Sales")]
+        [Authorize(Roles = "Admin")]
         public IHttpActionResult Post(SalesModel sales)
         {
             SalesData data = new SalesData();
@@ -36,6 +37,7 @@ namespace PSMDataManager.Controllers
 
         [HttpDelete]
         [Route("api/Sales/{id}")]
+        [Authorize(Roles = "Admin")]
         public IHttpActionResult Delete(int id)
         {
             SalesData data = new SalesData();

@@ -25,6 +25,7 @@ namespace PSMDataManager.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "CustomerService")]
         public IHttpActionResult Post(ServiceModel service)
         {
             if (string.IsNullOrWhiteSpace(service.NamaPelanggan))
@@ -59,6 +60,7 @@ namespace PSMDataManager.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = "CustomerService")]
         public IHttpActionResult Put(ServiceModel service)
         {
             if (service.TanggalKonfirmasi == DateTime.MinValue)
@@ -79,6 +81,7 @@ namespace PSMDataManager.Controllers
 
         [HttpDelete]
         [Route("api/Service/{nomorNota}")]
+        [Authorize(Roles = "Admin")]
         public IHttpActionResult Delete(int nomorNota)
         {
             ServiceData data = new ServiceData();

@@ -25,6 +25,7 @@ namespace PSMDataManager.Controllers
 
         [HttpPost]
         [Route("api/Sparepart")]
+        [Authorize(Roles = "Buyer")]
         public IHttpActionResult Post(SparepartModel sparepart)
         {
             SparepartData data = new SparepartData();
@@ -35,6 +36,7 @@ namespace PSMDataManager.Controllers
 
         [HttpDelete]
         [Route("api/Sparepart/{id}")]
+        [Authorize(Roles = "Buyer")]
         public IHttpActionResult Delete(int id)
         {
             SparepartData data = new SparepartData();
