@@ -1,5 +1,6 @@
 ﻿using Caliburn.Micro;
 using System;
+using System.Windows;
 
 namespace PSMDesktopUI.Utils
 {
@@ -25,6 +26,15 @@ namespace PSMDesktopUI.Utils
         public void Error(Exception exception)
         {
             Write(NLog.LogLevel.Error, exception.ToString());
+
+            try
+            {
+                MessageBox.Show($"Terjadi error: { exception }", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            catch (Exception ex)
+            {
+                Write(NLog.LogLevel.Error, ex.ToString());
+            }
         }
 
         private void Write(NLog.LogLevel level, string format, params object[] args)
