@@ -1,18 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using Caliburn.Micro;
 using PSMDesktopUI.Library.Api;
 using PSMDesktopUI.Library.Helpers;
 using PSMDesktopUI.Library.Models;
+using PSMDesktopUI.Utils;
 using PSMDesktopUI.ViewModels;
 
 namespace PSMDesktopUI
 {
     public class Bootstrapper : BootstrapperBase
     {
-        private SimpleContainer _container = new SimpleContainer();
+        private readonly SimpleContainer _container = new SimpleContainer();
+        
+        // This static constructor is called before any Caliburn.Micro code is called.
+        static Bootstrapper()
+        {
+            // NLog doesn't automatically create directories for some reason.
+            if (!Directory.Exists("Logs"))
+            {
+                Directory.CreateDirectory("Logs");
+            }
+
+            LogManager.GetLog = type => new NLogLogger(type);
+        }
 
         public Bootstrapper()
         {
