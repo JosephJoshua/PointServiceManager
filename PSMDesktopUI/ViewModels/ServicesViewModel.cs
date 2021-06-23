@@ -250,6 +250,9 @@ namespace PSMDesktopUI.ViewModels
         {
             base.OnViewLoaded(view);
 
+            int x = 0;
+            Console.WriteLine(x / 0);
+
             await LoadServices();
         }
 

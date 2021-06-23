@@ -24,7 +24,6 @@
                                  Visibility="{c:Binding Path=IsErrorMessageVisible}">
                     <dxlc:LayoutItem.Label>
                         <TextBlock Text="{Binding Path=ErrorMessage}"
-                                   Foreground="White"
                                    TextWrapping="Wrap"
                                    TextAlignment="Center"
                                    MaxWidth="410" />

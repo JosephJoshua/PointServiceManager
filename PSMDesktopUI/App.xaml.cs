@@ -1,39 +1,39 @@
-﻿using System.Windows;
-using System.Windows.Threading;
+﻿using PSMDesktopUI.Utils;
+using System;
+using System.Threading.Tasks;
+using System.Windows;
 
 namespace PSMDesktopUI
 {
     public partial class App : Application
     {
-        public App()
+        protected override void OnStartup(StartupEventArgs e)
         {
-            Dispatcher.UnhandledException += OnDispatcherUnhandledException;
+            base.OnStartup(e);
+            SetupExceptionHandling();
         }
 
-        private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+        private void SetupExceptionHandling()
         {
-            #if DEBUG
+            AppDomain.CurrentDomain.UnhandledException += (s, e) => LogUnhandledException(s, e.ExceptionObject as Exception);
 
-            e.Handled = false;
-
-            #else
-
-            e.Handled = true;
-
-            string errorMessage = "";
-
-            if (e.Exception.InnerException == null)
+            DispatcherUnhandledException += (s, e) =>
             {
-                errorMessage = string.Format("An application error has occured: {0}", e.Exception.ToString());
-            }
-            else
+                LogUnhandledException(s, e.Exception);
+                e.Handled = true;
+            };
+
+            TaskScheduler.UnobservedTaskException += (s, e) =>
             {
-                errorMessage = string.Format("An application error has occured: {0} Inner exception: {1}", e.Exception.ToString(), e.Exception.InnerException.ToString());
-            }
+                LogUnhandledException(s, e.Exception);
+                e.SetObserved();
+            };
+        }
 
-            MessageBox.Show(errorMessage, "Application error", MessageBoxButton.OK, MessageBoxImage.Error);
-
-            #endif
+        private void LogUnhandledException(object sender, Exception exception)
+        {
+            var exceptionLogger = new NLogLogger(sender.GetType());
+            exceptionLogger.Error(exception);
         }
     }
 }
