@@ -20,8 +20,6 @@ namespace PSMDesktopUI.ViewModels
         private BindableCollection<TechnicianModel> _technicians;
         private TechnicianModel _selectedTechnician;
 
-        private string _searchText;
-
         public bool IsLoading
         {
             get => _isLoading;
@@ -58,17 +56,6 @@ namespace PSMDesktopUI.ViewModels
                 NotifyOfPropertyChange(() => SelectedTechnician);
                 NotifyOfPropertyChange(() => CanAddTechnician);
                 NotifyOfPropertyChange(() => CanDeleteTechnician);
-            }
-        }
-
-        public string SearchText
-        {
-            get => _searchText;
-
-            set
-            {
-                _searchText = value;
-                NotifyOfPropertyChange(() => SearchText);
             }
         }
 
@@ -127,15 +114,11 @@ namespace PSMDesktopUI.ViewModels
             if (IsLoading) return;
 
             IsLoading = true;
-            List<TechnicianModel> technicianList = await _technicianEndpoint.GetAll();
 
-            if (!string.IsNullOrWhiteSpace(SearchText))
-            {
-                technicianList = technicianList.Where(t => t.Nama.ToLower().Contains(SearchText.ToLower())).ToList();
-            }
+            List<TechnicianModel> technicianList = await _technicianEndpoint.GetAll();
+            Technicians = new BindableCollection<TechnicianModel>(technicianList);
 
             IsLoading = false;
-            Technicians = new BindableCollection<TechnicianModel>(technicianList);
         }
     }
 }

@@ -20,8 +20,6 @@ namespace PSMDesktopUI.ViewModels
         private BindableCollection<SalesModel> _sales;
         private SalesModel _selectedSales;
 
-        private string _searchText;
-
         public bool IsLoading
         {
             get => _isLoading;
@@ -58,17 +56,6 @@ namespace PSMDesktopUI.ViewModels
                 NotifyOfPropertyChange(() => SelectedSales);
                 NotifyOfPropertyChange(() => CanAddSales);
                 NotifyOfPropertyChange(() => CanDeleteSales);
-            }
-        }
-
-        public string SearchText
-        {
-            get => _searchText;
-            
-            set
-            {
-                _searchText = value;
-                NotifyOfPropertyChange(() => SearchText);
             }
         }
 
@@ -126,15 +113,11 @@ namespace PSMDesktopUI.ViewModels
             if (IsLoading) return;
 
             IsLoading = true;
-            List<SalesModel> salesList = await _salesEndpoint.GetAll();
 
-            if (!string.IsNullOrWhiteSpace(SearchText))
-            {
-                salesList = salesList.Where(s => s.Nama.ToLower().Contains(SearchText.ToLower())).ToList();
-            }
+            List<SalesModel> salesList = await _salesEndpoint.GetAll();
+            Sales = new BindableCollection<SalesModel>(salesList);
 
             IsLoading = false;
-            Sales = new BindableCollection<SalesModel>(salesList);
         }
     }
 }

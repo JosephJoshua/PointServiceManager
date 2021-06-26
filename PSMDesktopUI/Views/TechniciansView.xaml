@@ -26,7 +26,6 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="35" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         
@@ -38,13 +37,6 @@
                    Foreground="White"
                    HorizontalAlignment="Center"
                    Margin="0 0 0 10" />
-        
-        <!-- Search box -->
-        <dxe:TextEdit Grid.Column="0" Grid.Row="1"
-                      Grid.ColumnSpan="2"
-                      NullText="Cari.."
-                      Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
-                      cal:Message.Attach="[Event KeyDown] = [Action Search($eventArgs)]"/>
 
         <!-- Progress bar -->
         <ProgressBar Style="{StaticResource MaterialDesignCircularProgressBar}"
