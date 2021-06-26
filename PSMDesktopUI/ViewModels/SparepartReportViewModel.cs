@@ -79,7 +79,7 @@ namespace PSMDesktopUI.ViewModels
 
         public decimal TotalCost
         {
-            get => Spareparts.Sum(t => t.Harga);
+            get => Spareparts?.Sum(t => t.Harga) ?? 0;
         }
 
         public SparepartReportViewModel(ISparepartEndpoint sparepartEndpoint)
