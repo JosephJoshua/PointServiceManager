@@ -26,7 +26,7 @@ namespace PSMDesktopUI.Library.Api
                 }
                 else
                 {
-                    throw new Exception(response.ReasonPhrase);
+                    throw await ApiException.FromHttpResponse(response);
                 }
             }
         }
@@ -42,7 +42,7 @@ namespace PSMDesktopUI.Library.Api
                 }
                 else
                 {
-                    throw new Exception(response.ReasonPhrase);
+                    throw await ApiException.FromHttpResponse(response);
                 }
             }
         }
@@ -57,26 +57,38 @@ namespace PSMDesktopUI.Library.Api
 
                     if (!int.TryParse(responseContent, out int nomorNota))
                     {
-                        throw new Exception("Unexpected API response: " + responseContent + "\nExpected nomor nota as int");
+                        throw new ApiException("Unexpected API response: " + responseContent + "\nExpected nomor nota as int");
                     }
 
                     return nomorNota;
                 }
                 else
                 {
-                    throw new Exception(response.ReasonPhrase);
+                    throw await ApiException.FromHttpResponse(response);
                 }
             }
         }
 
         public async Task Update(ServiceModel service)
         {
-            await _apiHelper.ApiClient.PutAsJsonAsync("/api/Service", service).ConfigureAwait(false);
+            using (HttpResponseMessage response = await _apiHelper.ApiClient.PutAsJsonAsync("/api/Service", service).ConfigureAwait(false))
+            {
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw await ApiException.FromHttpResponse(response);
+                }
+            }
         }
 
         public async Task Delete(int nomorNota)
         {
-            await _apiHelper.ApiClient.DeleteAsync("/api/Service/" + nomorNota).ConfigureAwait(false);
+            using (HttpResponseMessage response = await _apiHelper.ApiClient.DeleteAsync("/api/Service/" + nomorNota).ConfigureAwait(false))
+            {
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw await ApiException.FromHttpResponse(response);
+                }
+            }
         }
     }
 }
