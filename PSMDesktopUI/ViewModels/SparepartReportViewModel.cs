@@ -54,7 +54,7 @@ namespace PSMDesktopUI.ViewModels
             {
                 _startDate = value;
                 NotifyOfPropertyChange(() => StartDate);
-                
+
                 LoadSpareparts();
             }
         }

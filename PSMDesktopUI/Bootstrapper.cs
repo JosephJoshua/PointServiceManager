@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Windows;
-using Caliburn.Micro;
+﻿using Caliburn.Micro;
 using PSMDesktopUI.Library.Api;
 using PSMDesktopUI.Library.Helpers;
 using PSMDesktopUI.Library.Models;
 using PSMDesktopUI.Utils;
 using PSMDesktopUI.ViewModels;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Windows;
 
 namespace PSMDesktopUI
 {
     public class Bootstrapper : BootstrapperBase
     {
         private readonly SimpleContainer _container = new SimpleContainer();
-        
+
         // This static constructor is called before any Caliburn.Micro code is called.
         static Bootstrapper()
         {

@@ -78,7 +78,7 @@ namespace PSMDesktopUI.ViewModels
         {
             get => ProfitResults != null && ProfitResults.Count > 0;
         }
-        
+
         public decimal TotalRevenue
         {
             get => ProfitResults?.Sum(t => t.Biaya) ?? 0;

@@ -1,6 +1,5 @@
 ﻿using Caliburn.Micro;
 using PSMDesktopUI.Library.Api;
-using PSMDesktopUI.Library.Helpers;
 using System;
 using System.Threading.Tasks;
 using System.Windows;
@@ -82,7 +81,7 @@ namespace PSMDesktopUI.ViewModels
                 var result = await _apiHelper.Authenticate(Username, Password);
                 await _apiHelper.GetLoggedInUserInfo(result.access_token);
 
-                Application.Current.Dispatcher.Invoke(() => TryClose(true));
+                await Application.Current.Dispatcher.Invoke(async () => await TryCloseAsync(true));
             }
             catch (Exception ex)
             {
@@ -90,7 +89,7 @@ namespace PSMDesktopUI.ViewModels
             }
             finally
             {
-               Application.Current.Dispatcher.Invoke(() => Mouse.OverrideCursor = null);
+                Application.Current.Dispatcher.Invoke(() => Mouse.OverrideCursor = null);
             }
         }
     }

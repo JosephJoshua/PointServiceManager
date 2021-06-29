@@ -1,15 +1,15 @@
 ﻿using Caliburn.Micro;
 using DevExpress.Xpf.Core;
+using DevExpress.Xpf.Grid;
 using PSMDesktopUI.Library.Api;
 using PSMDesktopUI.Library.Models;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Linq;
 using System.Windows.Input;
-using System.Globalization;
-using DevExpress.Xpf.Grid;
-using System;
 
 namespace PSMDesktopUI.ViewModels
 {
@@ -164,7 +164,7 @@ namespace PSMDesktopUI.ViewModels
                 NotifyOfPropertyChange(() => StartDate);
             }
         }
-        
+
         public DateTime EndDate
         {
             get => _endDate;
@@ -200,7 +200,7 @@ namespace PSMDesktopUI.ViewModels
         {
             get => IsAdmin && !IsLoading && SelectedSparepart != null;
         }
-        
+
         public bool CanPrintService
         {
             get => !IsBuyer && !IsLoading && SelectedService != null;
@@ -256,7 +256,7 @@ namespace PSMDesktopUI.ViewModels
         public async Task OnMasterRowExpanding(RowAllowEventArgs args)
         {
             ServiceModel service = (ServiceModel)args.Row;
-            
+
             if (service.Spareparts == null)
             {
                 service.Spareparts = await _sparepartEndpoint.GetByNomorNota(service.NomorNota);
@@ -275,13 +275,13 @@ namespace PSMDesktopUI.ViewModels
         {
             AddServiceViewModel addServiceVM = IoC.Get<AddServiceViewModel>();
 
-            if (_windowManager.ShowDialog(addServiceVM) == true)
+            if (await _windowManager.ShowDialogAsync(addServiceVM) == true)
             {
                 if (addServiceVM.NomorNota != -1 &&
                     DXMessageBox.Show("Apakah anda ingin mencetak servisan ini?", "Tambah servisan", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
                     ServiceModel newService = await _serviceEndpoint.GetByNomorNota(addServiceVM.NomorNota);
-                    PrintService(newService);
+                    await PrintService(newService);
                 }
 
                 await LoadServices();
@@ -295,7 +295,7 @@ namespace PSMDesktopUI.ViewModels
             AddSparepartViewModel addSparepartVM = IoC.Get<AddSparepartViewModel>();
             addSparepartVM.SetNomorNota(nomorNota);
 
-            if (_windowManager.ShowDialog(addSparepartVM) == true)
+            if (await _windowManager.ShowDialogAsync(addSparepartVM) == true)
             {
                 await LoadServices();
             }
@@ -308,7 +308,7 @@ namespace PSMDesktopUI.ViewModels
             EditServiceViewModel editServiceVM = IoC.Get<EditServiceViewModel>();
             editServiceVM.SetFieldValues(service);
 
-            if (_windowManager.ShowDialog(editServiceVM) == true)
+            if (await _windowManager.ShowDialogAsync(editServiceVM) == true)
             {
                 await LoadServices();
             }
@@ -321,7 +321,7 @@ namespace PSMDesktopUI.ViewModels
             EditServiceLimitedViewModel editServiceVM = IoC.Get<EditServiceLimitedViewModel>();
             editServiceVM.SetFieldValues(service);
 
-            if (_windowManager.ShowDialog(editServiceVM) == true)
+            if (await _windowManager.ShowDialogAsync(editServiceVM) == true)
             {
                 await LoadServices();
             }
@@ -408,13 +408,13 @@ namespace PSMDesktopUI.ViewModels
             OnRefresh?.Invoke();
         }
 
-        public void PrintSelectedService()
+        public async Task PrintSelectedService()
         {
             if (SelectedService == null) return;
-            PrintService(SelectedService);
+            await PrintService(SelectedService);
         }
 
-        private void PrintService(ServiceModel service)
+        private async Task PrintService(ServiceModel service)
         {
             string kelengkapan = service.Kelengkapan?.Trim().Replace(" ", ", ");
 
@@ -452,7 +452,7 @@ namespace PSMDesktopUI.ViewModels
                 Tanggal = service.Tanggal.ToString(DateTimeFormatInfo.CurrentInfo.LongDatePattern),
             });
 
-            _windowManager.ShowDialog(invoicePreviewVM);
+            await _windowManager.ShowDialogAsync(invoicePreviewVM);
         }
     }
 }

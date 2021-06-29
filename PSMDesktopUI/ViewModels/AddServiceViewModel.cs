@@ -166,7 +166,7 @@ namespace PSMDesktopUI.ViewModels
         public string Kerusakan
         {
             get => _kerusakan;
-            
+
             set
             {
                 _kerusakan = value;
@@ -286,7 +286,7 @@ namespace PSMDesktopUI.ViewModels
         public double TambahanBiaya
         {
             get => _tambahanBiaya;
-            
+
             set
             {
                 _tambahanBiaya = value;
@@ -460,13 +460,13 @@ namespace PSMDesktopUI.ViewModels
         {
             if (await AddService())
             {
-                TryClose(true);
+                await TryCloseAsync(true);
             }
         }
 
-        public void Cancel()
+        public async Task Cancel()
         {
-            TryClose(false);
+            await TryCloseAsync(false);
         }
 
         public async Task LoadSales()

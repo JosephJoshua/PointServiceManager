@@ -73,13 +73,12 @@ namespace PSMDesktopUI.ViewModels
             };
 
             await _sparepartEndpoint.Insert(sparepart);
-
-            TryClose(true);
+            await TryCloseAsync(true);
         }
 
-        public void Cancel()
+        public async Task Cancel()
         {
-            TryClose(false);
+            await TryCloseAsync(false);
         }
     }
 }

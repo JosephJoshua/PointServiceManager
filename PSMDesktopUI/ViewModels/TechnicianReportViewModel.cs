@@ -41,7 +41,7 @@ namespace PSMDesktopUI.ViewModels
                 NotifyOfPropertyChange(() => TotalRevenue);
                 NotifyOfPropertyChange(() => TotalCost);
                 NotifyOfPropertyChange(() => TotalProfit);
-                NotifyOfPropertyChange(() => Proceeds);;
+                NotifyOfPropertyChange(() => Proceeds); ;
             }
         }
 
@@ -81,7 +81,7 @@ namespace PSMDesktopUI.ViewModels
                 LoadResults();
             }
         }
-        
+
         public BindableCollection<TechnicianModel> Technicians
         {
             get => _technicians;
@@ -154,7 +154,7 @@ namespace PSMDesktopUI.ViewModels
         public TechnicianReportViewModel(IServiceEndpoint serviceEndpoint, ITechnicianEndpoint technicianEndpoint)
         {
             DisplayName = "Laporan Teknisi";
-            
+
             _serviceEndpoint = serviceEndpoint;
             _technicianEndpoint = technicianEndpoint;
         }

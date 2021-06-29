@@ -3,7 +3,6 @@ using DevExpress.Xpf.Core;
 using PSMDesktopUI.Library.Api;
 using PSMDesktopUI.Library.Models;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
@@ -94,7 +93,7 @@ namespace PSMDesktopUI.ViewModels
 
         public async Task AddTechnician()
         {
-            if (_windowManager.ShowDialog(IoC.Get<AddTechnicianViewModel>()) == true)
+            if (await _windowManager.ShowDialogAsync(IoC.Get<AddTechnicianViewModel>()) == true)
             {
                 await LoadTechnicians();
             }

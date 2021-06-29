@@ -1,7 +1,7 @@
 ﻿using Caliburn.Micro;
 using DevExpress.Xpf.Core;
 using PSMDesktopUI.Library.Api;
-using System.ComponentModel;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -20,10 +20,10 @@ namespace PSMDesktopUI.ViewModels
         private readonly TechnicianReportViewModel _technicianReportViewModel;
 
         private bool _loggedIn = false;
-        
+
         public ShellViewModel(IApiHelper apiHelper, IWindowManager windowManager,
             TechniciansViewModel techniciansViewModel, SalesViewModel salesViewModel,
-            ServicesViewModel servicesViewModel, SparepartReportViewModel sparepartReportViewModel, 
+            ServicesViewModel servicesViewModel, SparepartReportViewModel sparepartReportViewModel,
             ProfitReportViewModel profitReportViewModel, TechnicianReportViewModel technicianReportViewModel)
         {
             _apiHelper = apiHelper;
@@ -37,14 +37,12 @@ namespace PSMDesktopUI.ViewModels
             _technicianReportViewModel = technicianReportViewModel;
         }
 
-        public void OnClose(CancelEventArgs args)
+        public override Task<bool> CanCloseAsync(CancellationToken cancellationToken)
         {
-            if (!_loggedIn) return;
+            if (!_loggedIn) return Task.FromResult(true);
 
-            if (DXMessageBox.Show("Apakah anda yakin ingin keluar?", "Servisan Manager", MessageBoxButton.YesNo) != MessageBoxResult.Yes)
-            {
-                args.Cancel = true;
-            }
+            bool canClose = DXMessageBox.Show("Apakah anda yakin ingin keluar?", "Servisan Manager", MessageBoxButton.YesNo) == MessageBoxResult.Yes;
+            return Task.FromResult(canClose);
         }
 
         protected override async void OnViewLoaded(object view)
@@ -53,9 +51,9 @@ namespace PSMDesktopUI.ViewModels
 
             await Task.Delay(1000);
 
-            if (_windowManager.ShowDialog(IoC.Get<LoginViewModel>()) == false)
+            if (await _windowManager.ShowDialogAsync(IoC.Get<LoginViewModel>()) == false)
             {
-                TryClose();
+                await TryCloseAsync();
             }
             else
             {
