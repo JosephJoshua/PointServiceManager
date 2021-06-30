@@ -15,15 +15,9 @@ namespace PSMDesktopUI.Library.Api
 
         public ApiException(string message, Exception inner) : base(message, inner) { }
 
-        public ApiException(string message, string details) : this(message)
-        {
-            ErrorDescription = details;
-        }
+        public ApiException(string message, string errorDescription) : this(message) => ErrorDescription = errorDescription;
 
-        public ApiException(string message, Exception inner, string details) : this(message, inner)
-        {
-            ErrorDescription = details;
-        }
+        public ApiException(string message, Exception inner, string errorDescription) : this(message, inner) => ErrorDescription = errorDescription;
 
         public static async Task<Exception> FromHttpResponse(HttpResponseMessage response)
         {
