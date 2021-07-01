@@ -1,5 +1,7 @@
-﻿using PSMDataManager.Library.DataAccess;
+﻿using PSMDataManager.Exceptions;
+using PSMDataManager.Library.DataAccess;
 using PSMDataManager.Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Web.Http;
 
@@ -12,16 +14,30 @@ namespace PSMDataManager.Controllers
         [Route("api/Sales")]
         public List<SalesModel> Get()
         {
-            SalesData data = new SalesData();
-            return data.GetSales();
+            try
+            {
+                SalesData data = new SalesData();
+                return data.GetSales();
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
 
         [HttpGet]
         [Route("api/Sales/{id}")]
         public SalesModel GetById(int id)
         {
-            SalesData data = new SalesData();
-            return data.GetSalesById(id);
+            try
+            {
+                SalesData data = new SalesData();
+                return data.GetSalesById(id);
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
 
         [HttpPost]
@@ -29,10 +45,17 @@ namespace PSMDataManager.Controllers
         [Authorize(Roles = "Admin")]
         public IHttpActionResult Post(SalesModel sales)
         {
-            SalesData data = new SalesData();
-            data.InsertSales(sales);
+            try
+            {
+                SalesData data = new SalesData();
+                data.InsertSales(sales);
 
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
 
         [HttpDelete]
@@ -40,10 +63,17 @@ namespace PSMDataManager.Controllers
         [Authorize(Roles = "Admin")]
         public IHttpActionResult Delete(int id)
         {
-            SalesData data = new SalesData();
-            data.DeleteSales(id);
+            try
+            {
+                SalesData data = new SalesData();
+                data.DeleteSales(id);
 
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
     }
 }

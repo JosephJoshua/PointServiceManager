@@ -1,6 +1,6 @@
-﻿using System.Web.Http;
-using Microsoft.Owin.Security.OAuth;
+﻿using Microsoft.Owin.Security.OAuth;
 using PSMDataManager.Exceptions;
+using System.Web.Http;
 
 namespace PSMDataManager
 {

@@ -1,4 +1,5 @@
-﻿using PSMDataManager.Library.DataAccess;
+﻿using PSMDataManager.Exceptions;
+using PSMDataManager.Library.DataAccess;
 using PSMDataManager.Library.Models;
 using System;
 using System.Collections.Generic;
@@ -12,16 +13,30 @@ namespace PSMDataManager.Controllers
         [HttpGet]
         public List<ServiceModel> Get()
         {
-            ServiceData data = new ServiceData();
-            return data.GetServices();
+            try
+            {
+                ServiceData data = new ServiceData();
+                return data.GetServices();
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
 
         [HttpGet]
         [Route("api/Service/{nomorNota}")]
         public ServiceModel GetByNomorNota(int nomorNota)
         {
-            ServiceData data = new ServiceData();
-            return data.GetServiceByNomorNota(nomorNota);
+            try
+            {
+                ServiceData data = new ServiceData();
+                return data.GetServiceByNomorNota(nomorNota);
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
 
         [HttpPost]
@@ -53,10 +68,17 @@ namespace PSMDataManager.Controllers
                 service.TanggalPengambilan = new DateTime(1753, 1, 1, 0, 0, 0);
             }
 
-            ServiceData data = new ServiceData();
-            int nomorNota = data.InsertService(service);
+            try
+            {
+                ServiceData data = new ServiceData();
+                int nomorNota = data.InsertService(service);
 
-            return Ok(nomorNota);
+                return Ok(nomorNota);
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
 
         [HttpPut]
@@ -73,10 +95,17 @@ namespace PSMDataManager.Controllers
                 service.TanggalPengambilan = new DateTime(1753, 1, 1, 0, 0, 0);
             }
 
-            ServiceData data = new ServiceData();
-            data.UpdateService(service);
+            try
+            {
+                ServiceData data = new ServiceData();
+                data.UpdateService(service);
 
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
 
         [HttpDelete]
@@ -84,10 +113,17 @@ namespace PSMDataManager.Controllers
         [Authorize(Roles = "Admin")]
         public IHttpActionResult Delete(int nomorNota)
         {
-            ServiceData data = new ServiceData();
-            data.DeleteService(nomorNota);
+            try
+            {
+                ServiceData data = new ServiceData();
+                data.DeleteService(nomorNota);
 
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
     }
 }

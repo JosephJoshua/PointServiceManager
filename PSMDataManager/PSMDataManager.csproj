@@ -242,6 +242,9 @@
     <Compile Include="Controllers\SparepartController.cs" />
     <Compile Include="Controllers\TechnicianController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Exceptions\ApiException.cs" />
+    <Compile Include="Exceptions\ApiExceptionFilterAttribute.cs" />
+    <Compile Include="Exceptions\SqlApiException.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

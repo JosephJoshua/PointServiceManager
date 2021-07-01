@@ -1,5 +1,7 @@
-﻿using PSMDataManager.Library.DataAccess;
+﻿using PSMDataManager.Exceptions;
+using PSMDataManager.Library.DataAccess;
 using PSMDataManager.Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Web.Http;
 
@@ -12,16 +14,30 @@ namespace PSMDataManager.Controllers
         [Route("api/Technician")]
         public List<TechnicianModel> Get()
         {
-            TechnicianData data = new TechnicianData();
-            return data.GetTechnicians();
+            try
+            {
+                TechnicianData data = new TechnicianData();
+                return data.GetTechnicians();
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
 
         [HttpGet]
         [Route("api/Technician/{id}")]
         public TechnicianModel GetById(int id)
         {
-            TechnicianData data = new TechnicianData();
-            return data.GetTechnicianById(id);
+            try
+            {
+                TechnicianData data = new TechnicianData();
+                return data.GetTechnicianById(id);
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
 
         [HttpPost]
@@ -29,10 +45,17 @@ namespace PSMDataManager.Controllers
         [Authorize(Roles = "Admin")]
         public IHttpActionResult Post(TechnicianModel technician)
         {
-            TechnicianData data = new TechnicianData();
-            data.InsertTechnician(technician);
+            try
+            {
+                TechnicianData data = new TechnicianData();
+                data.InsertTechnician(technician);
 
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
 
         [HttpDelete]
@@ -40,10 +63,13 @@ namespace PSMDataManager.Controllers
         [Authorize(Roles = "Admin")]
         public IHttpActionResult Delete(int id)
         {
-            TechnicianData data = new TechnicianData();
-            data.DeleteTechnician(id);
-
-            return Ok();
+            try
+            {
+                TechnicianData data = new TechnicianData();
+                data.DeleteTechnician(id);
+                return Ok();
+            }
+            catch (Exception ex) { throw new SqlApiException(ex.Message); }
         }
     }
 }

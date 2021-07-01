@@ -25,15 +25,25 @@ namespace PSMDesktopUI.Library.Api
 
             if (response.Content.Headers.ContentType.MediaType == "application/json")
             {
-                var content = await response.Content.ReadAsAsync<HttpErrorContent>();
-                string message = $"{ response.ReasonPhrase }{ (content.Error != null ? ": " : "") }{ content.Error ?? "" }";
+                var apiError = await response.Content.ReadAsAsync<ApiError>();
 
-                if (content.ErrorDescription == null)
+                if (apiError.Message == null)
                 {
+                    var identityError = await response.Content.ReadAsAsync<ApiIdentityError>();
+                    string message = $"{ response.ReasonPhrase }{ (identityError.Error != null ? ": " : "") }{ identityError.Error ?? "" }";
+
+                    if (identityError.ErrorDescription == null)
+                    {
+                        return new ApiException(message);
+                    }
+
+                    return new ApiException(message, identityError.ErrorDescription);
+                }
+                else
+                {
+                    string message = $"{ response.ReasonPhrase }{ (apiError.Message != null ? ": " : "") }{ apiError.Message ?? "" }";
                     return new ApiException(message);
                 }
-
-                return new ApiException(message, content.ErrorDescription);
             }
             else if (response.Content.Headers.ContentType.MediaType == "text/plain")
             {
@@ -44,13 +54,18 @@ namespace PSMDesktopUI.Library.Api
             return new ApiException(response.ReasonPhrase);
         }
 
-        private class HttpErrorContent
+        private class ApiIdentityError
         {
             [JsonProperty(PropertyName = "error")]
             public string Error { get; set; }
 
             [JsonProperty(PropertyName = "error_description")]
             public string ErrorDescription { get; set; }
+        }
+
+        private class ApiError
+        {
+            public string Message { get; set; }
         }
     }
 }

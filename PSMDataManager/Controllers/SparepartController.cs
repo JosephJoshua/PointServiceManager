@@ -1,5 +1,7 @@
-﻿using PSMDataManager.Library.DataAccess;
+﻿using PSMDataManager.Exceptions;
+using PSMDataManager.Library.DataAccess;
 using PSMDataManager.Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Web.Http;
 
@@ -11,16 +13,30 @@ namespace PSMDataManager.Controllers
         [Route("api/Sparepart")]
         public List<SparepartModel> Get()
         {
-            SparepartData data = new SparepartData();
-            return data.GetSpareparts();
+            try
+            {
+                SparepartData data = new SparepartData();
+                return data.GetSpareparts();
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
 
         [HttpGet]
         [Route("api/Sparepart/{nomorNota}")]
         public List<SparepartModel> GetByService(int nomorNota)
         {
-            SparepartData data = new SparepartData();
-            return data.GetSparepartByNomorNota(nomorNota);
+            try
+            {
+                SparepartData data = new SparepartData();
+                return data.GetSparepartByNomorNota(nomorNota);
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
 
         [HttpPost]
@@ -28,10 +44,14 @@ namespace PSMDataManager.Controllers
         [Authorize(Roles = "Buyer")]
         public IHttpActionResult Post(SparepartModel sparepart)
         {
-            SparepartData data = new SparepartData();
-            data.InsertSparepart(sparepart);
+            try
+            {
+                SparepartData data = new SparepartData();
+                data.InsertSparepart(sparepart);
 
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex) { throw new SqlApiException(ex.Message); }
         }
 
         [HttpDelete]
@@ -39,10 +59,14 @@ namespace PSMDataManager.Controllers
         [Authorize(Roles = "Buyer")]
         public IHttpActionResult Delete(int id)
         {
-            SparepartData data = new SparepartData();
-            data.DeleteSparepart(id);
+            try
+            {
+                SparepartData data = new SparepartData();
+                data.DeleteSparepart(id);
 
-            return Ok();
+                return Ok();
+            }
+            catch (Exception ex) { throw new SqlApiException(ex.Message); }
         }
     }
 }

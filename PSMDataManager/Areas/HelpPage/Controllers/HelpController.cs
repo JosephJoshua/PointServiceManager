@@ -1,8 +1,8 @@
+using PSMDataManager.Areas.HelpPage.ModelDescriptions;
+using PSMDataManager.Areas.HelpPage.Models;
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using PSMDataManager.Areas.HelpPage.ModelDescriptions;
-using PSMDataManager.Areas.HelpPage.Models;
 
 namespace PSMDataManager.Areas.HelpPage.Controllers
 {

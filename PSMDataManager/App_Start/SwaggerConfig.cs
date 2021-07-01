@@ -1,8 +1,8 @@
+using PSMDataManager;
+using PSMDataManager.App_Start;
+using Swashbuckle.Application;
 using System.Web.Http;
 using WebActivatorEx;
-using PSMDataManager;
-using Swashbuckle.Application;
-using PSMDataManager.App_Start;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
@@ -65,7 +65,7 @@ namespace PSMDataManager
                         //c.BasicAuth("basic")
                         //    .Description("Basic HTTP Authentication");
                         //
-						// NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
+                        // NOTE: You must also configure 'EnableApiKeySupport' below in the SwaggerUI section
                         //c.ApiKey("apiKey")
                         //    .Description("API Key Authentication")
                         //    .Name("apiKey")

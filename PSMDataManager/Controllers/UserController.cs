@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNet.Identity;
+using PSMDataManager.Exceptions;
 using PSMDataManager.Library.DataAccess;
 using PSMDataManager.Library.Models;
+using System;
 using System.Linq;
 using System.Web.Http;
 
@@ -12,10 +14,17 @@ namespace PSMDataManager.Controllers
         [HttpGet]
         public UserModel GetById()
         {
-            string userId = RequestContext.Principal.Identity.GetUserId();
-            UserData data = new UserData();
+            try
+            {
+                string userId = RequestContext.Principal.Identity.GetUserId();
+                UserData data = new UserData();
 
-            return data.GetUserById(userId).FirstOrDefault();
+                return data.GetUserById(userId).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw new SqlApiException(ex.Message);
+            }
         }
     }
 }
