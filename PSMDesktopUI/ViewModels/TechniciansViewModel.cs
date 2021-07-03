@@ -2,6 +2,7 @@
 using DevExpress.Xpf.Core;
 using PSMDesktopUI.Library.Api;
 using PSMDesktopUI.Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,6 +12,8 @@ namespace PSMDesktopUI.ViewModels
 {
     public sealed class TechniciansViewModel : Screen
     {
+        private readonly ILog _logger;
+
         private readonly IWindowManager _windowManager;
         private readonly ITechnicianEndpoint _technicianEndpoint;
 
@@ -72,6 +75,7 @@ namespace PSMDesktopUI.ViewModels
         {
             DisplayName = "Teknisi";
 
+            _logger = LogManager.GetLog(typeof(TechniciansViewModel));
             _windowManager = windowManager;
             _technicianEndpoint = technicianEndpoint;
         }
@@ -103,7 +107,26 @@ namespace PSMDesktopUI.ViewModels
         {
             if (DXMessageBox.Show("Apakah anda yakin ingin menghapus teknisi ini?", "Teknisi", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                await _technicianEndpoint.Delete(SelectedTechnician.Id);
+                try
+                {
+                    await _technicianEndpoint.Delete(SelectedTechnician.Id);
+                }
+                catch (ApiException ex)
+                {
+                    // Check the error message to see if it was a foreign key constraint violation or not
+                    if (ex.Message.ToLower().Contains("conflicted with the reference constraint \"fk"))
+                    {
+                        DXMessageBox.Show("Tidak dapat menghapus teknisi ini karena masih terdapat servisan dengan teknisi ini.", "Teknisi", MessageBoxButton.OK);
+                        return;
+                    }
+
+                    _logger.Error(ex);
+                }
+                catch (Exception ex)
+                {
+                    _logger.Error(ex);
+                }
+
                 await LoadTechnicians();
             }
         }

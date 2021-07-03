@@ -2,6 +2,7 @@
 using DevExpress.Xpf.Core;
 using PSMDesktopUI.Library.Api;
 using PSMDesktopUI.Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows;
@@ -11,6 +12,8 @@ namespace PSMDesktopUI.ViewModels
 {
     public sealed class SalesViewModel : Screen
     {
+        private readonly ILog _logger;
+
         private readonly IWindowManager _windowManager;
         private readonly ISalesEndpoint _salesEndpoint;
 
@@ -72,6 +75,7 @@ namespace PSMDesktopUI.ViewModels
         {
             DisplayName = "Sales";
 
+            _logger = LogManager.GetLog(typeof(SalesViewModel));
             _windowManager = windowManager;
             _salesEndpoint = salesEndpoint;
         }
@@ -102,7 +106,26 @@ namespace PSMDesktopUI.ViewModels
         {
             if (DXMessageBox.Show("Apakah anda yakin ingin menghapus sales ini?", "Sales", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                await _salesEndpoint.Delete(SelectedSales.Id);
+                try
+                {
+                    await _salesEndpoint.Delete(SelectedSales.Id);
+                }
+                catch (ApiException ex)
+                {
+                    // Check the error message to see if it was a foreign key constraint violation or not
+                    if (ex.Message.ToLower().Contains("conflicted with the reference constraint \"fk"))
+                    {
+                        DXMessageBox.Show("Tidak dapat menghapus sales ini karena masih terdapat servisan dengan sales ini.", "Sales", MessageBoxButton.OK);
+                        return;
+                    }
+
+                    _logger.Error(ex);
+                }
+                catch (Exception ex)
+                {
+                    _logger.Error(ex);                    
+                }
+                
                 await LoadSales();
             }
         }
