@@ -1,58 +1,50 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
 using System.IO;
 
 namespace PSMDesktopUI.Library.Helpers
 {
+    public class Settings
+    {
+        public string ApiUrl { get; set; }
+
+        public string ReportPath { get; set; }
+    }
+
     public class SettingsHelper : ISettingsHelper
     {
-        private const string FilePath = "settings.txt";
+        public Settings Settings { get; private set; } = new Settings();
 
-        private readonly Dictionary<string, string> _settings = new Dictionary<string, string>();
+        private const string FilePath = "settings.json";
 
         public SettingsHelper()
         {
             Init();
         }
 
+        public void ReadSettingsFromFile()
+        {
+            string content = File.ReadAllText(FilePath);
+            Settings = JsonConvert.DeserializeObject<Settings>(content);
+        }
+
+        public void SaveSettingsToFile()
+        {
+            string data = JsonConvert.SerializeObject(Settings);
+            File.WriteAllText(FilePath, data);
+        }
+
         private void Init()
         {
-            if (File.Exists(FilePath))
+            if (!File.Exists(FilePath))
             {
-                GetSettings();
-            }
-            else
-            {
-                // Create default settings file if it doesn't exist
-                TextWriter writer = new StreamWriter(FilePath);
+                // Create file with default settings if it doesn't exist
+                Settings.ApiUrl = "http://localhost:3030";
+                Settings.ReportPath = "Reports/ServiceInvoice.rpt";
 
-                writer.WriteLine(@"apiUrl: http://localhost:3030/");
-                writer.WriteLine(@"reportPath: Reports/ServiceInvoice.rpt");
-
-                writer.Close();
-
-                GetSettings();
-            }
-        }
-
-        private void GetSettings()
-        {
-            foreach (string line in File.ReadAllLines(FilePath))
-            {
-                string key = line.Split(':')[0];
-                string val = line.Substring(key.Length + 1);
-
-                _settings.Add(key, val);
-            }
-        }
-
-        public string Get(string key)
-        {
-            if (_settings.TryGetValue(key, out string val))
-            {
-                return val;
+                SaveSettingsToFile();
             }
 
-            return "";
+            ReadSettingsFromFile();
         }
     }
 }

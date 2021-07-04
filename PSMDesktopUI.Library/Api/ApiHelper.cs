@@ -13,7 +13,7 @@ namespace PSMDesktopUI.Library.Api
     {
         public ILoggedInUserModel LoggedInUser { get; set; }
 
-        private readonly ISettingsHelper _settings;
+        private readonly ISettingsHelper _settingsHelper;
 
         private HttpClient _apiClient { get; set; }
 
@@ -24,7 +24,7 @@ namespace PSMDesktopUI.Library.Api
 
         public ApiHelper(ILoggedInUserModel loggedInUser, ISettingsHelper settings)
         {
-            _settings = settings;
+            _settingsHelper = settings;
 
             InitializeClient();
 
@@ -33,11 +33,11 @@ namespace PSMDesktopUI.Library.Api
 
         private void InitializeClient()
         {
-            string api = _settings.Get("apiUrl");
+            string apiUrl = _settingsHelper.Settings.ApiUrl;
 
             _apiClient = new HttpClient
             {
-                BaseAddress = new Uri(api)
+                BaseAddress = new Uri(apiUrl)
             };
 
             _apiClient.DefaultRequestHeaders.Accept.Clear();
