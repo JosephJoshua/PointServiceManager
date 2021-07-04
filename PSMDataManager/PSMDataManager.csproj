@@ -251,6 +251,10 @@
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\SalesBindingModels.cs" />
+    <Compile Include="Models\ServiceBindingModels.cs" />
+    <Compile Include="Models\SparepartBindingModels.cs" />
+    <Compile Include="Models\TechnicianBindingModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />

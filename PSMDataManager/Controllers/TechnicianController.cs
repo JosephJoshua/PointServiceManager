@@ -1,6 +1,7 @@
 ﻿using PSMDataManager.Exceptions;
 using PSMDataManager.Library.DataAccess;
 using PSMDataManager.Library.Models;
+using PSMDataManager.Models;
 using System;
 using System.Collections.Generic;
 using System.Web.Http;
@@ -43,12 +44,12 @@ namespace PSMDataManager.Controllers
         [HttpPost]
         [Route("api/Technician")]
         [Authorize(Roles = "Admin")]
-        public IHttpActionResult Post(TechnicianModel technician)
+        public IHttpActionResult Post(AddTechnicianBindingModel model)
         {
             try
             {
                 TechnicianData data = new TechnicianData();
-                data.InsertTechnician(technician);
+                data.InsertTechnician(new TechnicianModel { Nama = model.Nama });
 
                 return Ok();
             }
@@ -69,7 +70,10 @@ namespace PSMDataManager.Controllers
                 data.DeleteTechnician(id);
                 return Ok();
             }
-            catch (Exception ex) { throw new SqlApiException(ex.Message); }
+            catch (Exception ex) 
+            { 
+                throw new SqlApiException(ex.Message);
+            }
         }
     }
 }

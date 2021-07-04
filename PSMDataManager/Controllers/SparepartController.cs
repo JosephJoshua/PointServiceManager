@@ -1,6 +1,7 @@
 ﻿using PSMDataManager.Exceptions;
 using PSMDataManager.Library.DataAccess;
 using PSMDataManager.Library.Models;
+using PSMDataManager.Models;
 using System;
 using System.Collections.Generic;
 using System.Web.Http;
@@ -42,16 +43,25 @@ namespace PSMDataManager.Controllers
         [HttpPost]
         [Route("api/Sparepart")]
         [Authorize(Roles = "Buyer")]
-        public IHttpActionResult Post(SparepartModel sparepart)
+        public IHttpActionResult Post(AddSparepartBindingModel model)
         {
             try
             {
                 SparepartData data = new SparepartData();
-                data.InsertSparepart(sparepart);
+                data.InsertSparepart(new SparepartModel 
+                { 
+                    NomorNota = model.NomorNota,
+                    Nama = model.Nama,
+                    Harga = model.Harga,
+                    TanggalPembelian = model.TanggalPengambilan,
+                });
 
                 return Ok();
             }
-            catch (Exception ex) { throw new SqlApiException(ex.Message); }
+            catch (Exception ex) 
+            { 
+                throw new SqlApiException(ex.Message);
+            }
         }
 
         [HttpDelete]
@@ -66,7 +76,10 @@ namespace PSMDataManager.Controllers
 
                 return Ok();
             }
-            catch (Exception ex) { throw new SqlApiException(ex.Message); }
+            catch (Exception ex) 
+            { 
+                throw new SqlApiException(ex.Message);
+            }
         }
     }
 }

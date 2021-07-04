@@ -1,6 +1,7 @@
 ﻿using PSMDataManager.Exceptions;
 using PSMDataManager.Library.DataAccess;
 using PSMDataManager.Library.Models;
+using PSMDataManager.Models;
 using System;
 using System.Collections.Generic;
 using System.Web.Http;
@@ -41,37 +42,45 @@ namespace PSMDataManager.Controllers
 
         [HttpPost]
         [Authorize(Roles = "CustomerService")]
-        public IHttpActionResult Post(ServiceModel service)
+        public IHttpActionResult Post(AddServiceBindingModel model)
         {
-            if (string.IsNullOrWhiteSpace(service.NamaPelanggan))
+            if (model.TanggalKonfirmasi == DateTime.MinValue)
             {
-                return BadRequest("The field 'NamaPelanggan' cannot be null");
+                model.TanggalKonfirmasi = new DateTime(1753, 1, 1, 0, 0, 0);
             }
 
-            if (string.IsNullOrWhiteSpace(service.TipeHp))
+            if (model.TanggalPengambilan == DateTime.MinValue)
             {
-                return BadRequest("The field 'TipeHp' cannot be null");
-            }
-
-            if (string.IsNullOrWhiteSpace(service.Kerusakan))
-            {
-                return BadRequest("The field 'Kerusakan' cannot be null");
-            }
-
-            if (service.TanggalKonfirmasi == DateTime.MinValue)
-            {
-                service.TanggalKonfirmasi = new DateTime(1753, 1, 1, 0, 0, 0);
-            }
-
-            if (service.TanggalPengambilan == DateTime.MinValue)
-            {
-                service.TanggalPengambilan = new DateTime(1753, 1, 1, 0, 0, 0);
+                model.TanggalPengambilan = new DateTime(1753, 1, 1, 0, 0, 0);
             }
 
             try
             {
                 ServiceData data = new ServiceData();
-                int nomorNota = data.InsertService(service);
+                int nomorNota = data.InsertService(new ServiceModel
+                {
+                    NamaPelanggan = model.NamaPelanggan,
+                    NoHp = model.NoHp,
+                    TipeHp = model.TipeHp,
+                    Imei = model.Imei,
+                    Kerusakan = model.Kerusakan,
+                    KondisiHp = model.KondisiHp,
+                    YangBelumDicek = model.YangBelumDicek,
+                    Kelengkapan = model.Kelengkapan,
+                    Warna = model.Warna,
+                    KataSandiPola = model.KataSandiPola,
+                    TechnicianId = model.TechnicianId,
+                    SalesId = model.SalesId,
+                    StatusServisan = model.StatusServisan,
+                    TanggalKonfirmasi = model.TanggalKonfirmasi,
+                    IsiKonfirmasi = model.IsiKonfirmasi,
+                    Biaya = model.Biaya,
+                    Discount = model.Discount,
+                    Dp = model.Dp,
+                    TambahanBiaya = model.TambahanBiaya,
+                    HargaSparepart = model.HargaSparepart,
+                    TanggalPengambilan = model.TanggalPengambilan,
+                });
 
                 return Ok(nomorNota);
             }
@@ -83,22 +92,46 @@ namespace PSMDataManager.Controllers
 
         [HttpPut]
         [Authorize(Roles = "CustomerService")]
-        public IHttpActionResult Put(ServiceModel service)
+        public IHttpActionResult Put(EditServiceBindingModel model)
         {
-            if (service.TanggalKonfirmasi == DateTime.MinValue)
+            if (model.TanggalKonfirmasi == DateTime.MinValue)
             {
-                service.TanggalKonfirmasi = new DateTime(1753, 1, 1, 0, 0, 0);
+                model.TanggalKonfirmasi = new DateTime(1753, 1, 1, 0, 0, 0);
             }
 
-            if (service.TanggalPengambilan == DateTime.MinValue)
+            if (model.TanggalPengambilan == DateTime.MinValue)
             {
-                service.TanggalPengambilan = new DateTime(1753, 1, 1, 0, 0, 0);
+                model.TanggalPengambilan = new DateTime(1753, 1, 1, 0, 0, 0);
             }
 
             try
             {
                 ServiceData data = new ServiceData();
-                data.UpdateService(service);
+                data.UpdateService(new ServiceModel
+                {
+                    NomorNota = model.NomorNota,
+                    NamaPelanggan = model.NamaPelanggan,
+                    NoHp = model.NoHp,
+                    TipeHp = model.TipeHp,
+                    Imei = model.Imei,
+                    Kerusakan = model.Kerusakan,
+                    KondisiHp = model.KondisiHp,
+                    YangBelumDicek = model.YangBelumDicek,
+                    Kelengkapan = model.Kelengkapan,
+                    Warna = model.Warna,
+                    KataSandiPola = model.KataSandiPola,
+                    TechnicianId = model.TechnicianId,
+                    SalesId = model.SalesId,
+                    StatusServisan = model.StatusServisan,
+                    TanggalKonfirmasi = model.TanggalKonfirmasi,
+                    IsiKonfirmasi = model.IsiKonfirmasi,
+                    Biaya = model.Biaya,
+                    Discount = model.Discount,
+                    Dp = model.Dp,
+                    TambahanBiaya = model.TambahanBiaya,
+                    HargaSparepart = model.HargaSparepart,
+                    TanggalPengambilan = model.TanggalPengambilan,
+                });
 
                 return Ok();
             }

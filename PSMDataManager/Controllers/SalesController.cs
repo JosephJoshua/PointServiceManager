@@ -1,6 +1,7 @@
 ﻿using PSMDataManager.Exceptions;
 using PSMDataManager.Library.DataAccess;
 using PSMDataManager.Library.Models;
+using PSMDataManager.Models;
 using System;
 using System.Collections.Generic;
 using System.Web.Http;
@@ -43,12 +44,12 @@ namespace PSMDataManager.Controllers
         [HttpPost]
         [Route("api/Sales")]
         [Authorize(Roles = "Admin")]
-        public IHttpActionResult Post(SalesModel sales)
+        public IHttpActionResult Post(AddSalesBindingModel model)
         {
             try
             {
                 SalesData data = new SalesData();
-                data.InsertSales(sales);
+                data.InsertSales(new SalesModel { Nama = model.Nama });
 
                 return Ok();
             }
