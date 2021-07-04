@@ -16,6 +16,9 @@ namespace PSMDataManager
             // Configure Web API to return any thrown API exceptions as a response
             config.Filters.Add(new ApiExceptionFilterAttribute());
 
+            // Configure Web API to validate model state before any request
+            config.Filters.Add(new ValidationActionFilterAttribute());
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 
