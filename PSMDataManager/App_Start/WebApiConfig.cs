@@ -1,5 +1,5 @@
 ﻿using Microsoft.Owin.Security.OAuth;
-using PSMDataManager.Exceptions;
+using PSMDataManager.FilterAttributes;
 using System.Web.Http;
 
 namespace PSMDataManager

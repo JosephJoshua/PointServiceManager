@@ -1,7 +1,8 @@
-﻿using System.Net.Http;
+﻿using PSMDataManager.Exceptions;
+using System.Net.Http;
 using System.Web.Http.Filters;
 
-namespace PSMDataManager.Exceptions
+namespace PSMDataManager.FilterAttributes
 {
     public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
     {
