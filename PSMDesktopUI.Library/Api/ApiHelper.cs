@@ -2,7 +2,6 @@
 using PSMDesktopUI.Library.Models;
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -62,7 +61,7 @@ namespace PSMDesktopUI.Library.Api
                 }
                 else
                 {
-                    throw await ApiException.FromHttpResponse(response);
+                    throw await ApiException.FromAuthHttpResponse(response);
                 }
             }
         }
@@ -89,7 +88,7 @@ namespace PSMDesktopUI.Library.Api
                 }
                 else
                 {
-                    throw await ApiException.FromHttpResponse(response);
+                    throw await ApiException.FromAuthHttpResponse(response);
                 }
             }
         }

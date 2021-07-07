@@ -83,6 +83,10 @@ namespace PSMDesktopUI.ViewModels
 
                 await Application.Current.Dispatcher.Invoke(async () => await TryCloseAsync(true));
             }
+            catch (ApiException ex)
+            {
+                ErrorMessage = ex.Message + Environment.NewLine + ex.ErrorDescription;
+            }
             catch (Exception ex)
             {
                 ErrorMessage = ex.Message;

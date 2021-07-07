@@ -19,6 +19,31 @@ namespace PSMDesktopUI.Library.Api
 
         public ApiException(string message, Exception inner, string errorDescription) : this(message, inner) => ErrorDescription = errorDescription;
 
+        public static async Task<Exception> FromAuthHttpResponse(HttpResponseMessage response)
+        {
+            if (response.IsSuccessStatusCode) return new Exception("Attempting to create an ApiException from a successful request");
+
+            if (response.Content.Headers.ContentType.MediaType == "application/json")
+            {
+                var identityError = await response.Content.ReadAsAsync<ApiIdentityError>();
+                string message = $"{ response.ReasonPhrase }{ (identityError.Error != null ? ": " : "") }{ identityError.Error ?? "" }";
+
+                if (identityError.ErrorDescription == null)
+                {
+                    return new ApiException(message);
+                }
+
+                return new ApiException(message, identityError.ErrorDescription);
+            }
+            else if (response.Content.Headers.ContentType.MediaType == "text/plain")
+            {
+                string message = await response.Content.ReadAsStringAsync();
+                return new ApiException(message);
+            }
+
+            return new ApiException(response.ReasonPhrase);
+        }
+
         public static async Task<Exception> FromHttpResponse(HttpResponseMessage response)
         {
             if (response.IsSuccessStatusCode) return new Exception("Attempting to create an ApiException from a successful request");
@@ -26,24 +51,9 @@ namespace PSMDesktopUI.Library.Api
             if (response.Content.Headers.ContentType.MediaType == "application/json")
             {
                 var apiError = await response.Content.ReadAsAsync<ApiError>();
+                string message = $"{ response.ReasonPhrase }{ (apiError.Message != null ? ": " : "") }{ apiError.Message ?? "" }";
 
-                if (apiError.Message == null)
-                {
-                    var identityError = await response.Content.ReadAsAsync<ApiIdentityError>();
-                    string message = $"{ response.ReasonPhrase }{ (identityError.Error != null ? ": " : "") }{ identityError.Error ?? "" }";
-
-                    if (identityError.ErrorDescription == null)
-                    {
-                        return new ApiException(message);
-                    }
-
-                    return new ApiException(message, identityError.ErrorDescription);
-                }
-                else
-                {
-                    string message = $"{ response.ReasonPhrase }{ (apiError.Message != null ? ": " : "") }{ apiError.Message ?? "" }";
-                    return new ApiException(message);
-                }
+                return new ApiException(message);
             }
             else if (response.Content.Headers.ContentType.MediaType == "text/plain")
             {
