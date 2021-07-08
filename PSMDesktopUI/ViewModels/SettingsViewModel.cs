@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using DevExpress.Xpf.Core;
 using PSMDesktopUI.Library.Helpers;
 using System.Threading.Tasks;
 
@@ -71,6 +72,13 @@ namespace PSMDesktopUI.ViewModels
 
         public async Task Save()
         {
+            // Could optimize this from O(2n) to O(n), but that would be pretty pointless.
+            if (!ValidatePrinterName(ServicePrinterName) || !ValidatePrinterName(LabelPrinterName))
+            {
+                DXMessageBox.Show("Printer yang dipilih tidak dapat ditemukan. Tolong atur ulang nama printer atau pastikan printer yang dipilih terhubung dengan komputer anda.", "Settings");
+                return;
+            }
+
             _settingsHelper.Settings.ApiUrl = ApiUrl;
             _settingsHelper.Settings.ReportPath = ReportPath;
             _settingsHelper.Settings.ServicePrinterName = ServicePrinterName;
@@ -83,6 +91,16 @@ namespace PSMDesktopUI.ViewModels
         public async Task Cancel()
         {
             await TryCloseAsync(false);
+        }
+
+        private bool ValidatePrinterName(string toValidate)
+        {
+            foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
+            {
+                if (toValidate == printer) return true;
+            }
+
+            return false;
         }
 
         private void ReadSettingsFromFile()
