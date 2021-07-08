@@ -81,5 +81,10 @@ namespace PSMDesktopUI.ViewModels
                 }
             }
         }
+
+        public async Task OpenSettings()
+        {
+            await _windowManager.ShowDialogAsync(IoC.Get<SettingsViewModel>());
+        }
     }
 }

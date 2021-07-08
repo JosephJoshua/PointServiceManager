@@ -15,7 +15,19 @@
     Height="728" Width="1080">
 
     <Grid>
-        <TabControl Name="Items" SelectedIndex="0" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+
+        <TabControl Grid.Row="0" Name="Items" SelectedIndex="0" />
+
+        <dx:SimpleButton x:Name="OpenSettings"
+                         Grid.Row="1"
+                         Margin="0 2 4 0"
+                         Width="100"
+                         HorizontalAlignment="Right"
+                         VerticalAlignment="Center"
+                         Content="Settings" />
     </Grid>
-    
 </dx:ThemedWindow>
