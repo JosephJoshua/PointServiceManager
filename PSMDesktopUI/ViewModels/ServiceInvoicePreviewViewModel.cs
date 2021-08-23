@@ -27,7 +27,7 @@ namespace PSMDesktopUI.ViewModels
 
             if (_invoiceModel != null)
             {
-                v.SetInvoiceModel(_invoiceModel, reportPath, _settingsHelper.Settings.ServicePrinterName);
+                v.SetInvoiceModel(_invoiceModel, reportPath);
             }
 
             base.OnViewLoaded(view);

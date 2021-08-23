@@ -8,10 +8,6 @@ namespace PSMDesktopUI.Library.Helpers
         public string ApiUrl { get; set; }
 
         public string ReportPath { get; set; }
-
-        public string ServicePrinterName { get; set; }
-
-        public string LabelPrinterName { get; set; }
     }
 
     public class SettingsHelper : ISettingsHelper
@@ -44,8 +40,6 @@ namespace PSMDesktopUI.Library.Helpers
                 // Create file with default settings if it doesn't exist
                 Settings.ApiUrl = "http://localhost:3030";
                 Settings.ReportPath = "Reports/ServiceInvoice.rpt";
-                Settings.ServicePrinterName = "";
-                Settings.LabelPrinterName = "";
 
                 SaveSettingsToFile();
             }

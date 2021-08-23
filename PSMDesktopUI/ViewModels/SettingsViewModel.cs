@@ -1,5 +1,4 @@
 ﻿using Caliburn.Micro;
-using DevExpress.Xpf.Core;
 using PSMDesktopUI.Library.Helpers;
 using System.Threading.Tasks;
 
@@ -11,9 +10,6 @@ namespace PSMDesktopUI.ViewModels
 
         private string _apiUrl;
         private string _reportPath;
-
-        private string _servicePrinterName;
-        private string _labelPrinterName;
 
         public string ApiUrl
         {
@@ -37,28 +33,6 @@ namespace PSMDesktopUI.ViewModels
             }
         }
 
-        public string ServicePrinterName
-        {
-            get => _servicePrinterName;
-
-            set
-            {
-                _servicePrinterName = value;
-                NotifyOfPropertyChange(() => ServicePrinterName);
-            }
-        }
-
-        public string LabelPrinterName
-        {
-            get => _labelPrinterName;
-
-            set
-            {
-                _labelPrinterName = value;
-                NotifyOfPropertyChange(() => LabelPrinterName);
-            }
-        }
-
         public SettingsViewModel(ISettingsHelper settingsHelper)
         {
             _settingsHelper = settingsHelper;
@@ -72,17 +46,8 @@ namespace PSMDesktopUI.ViewModels
 
         public async Task Save()
         {
-            // Could optimize this from O(2n) to O(n), but that would be pretty pointless.
-            if (!ValidatePrinterName(ServicePrinterName) || !ValidatePrinterName(LabelPrinterName))
-            {
-                DXMessageBox.Show("Printer yang dipilih tidak dapat ditemukan. Tolong atur ulang nama printer atau pastikan printer yang dipilih terhubung dengan komputer anda.", "Settings");
-                return;
-            }
-
             _settingsHelper.Settings.ApiUrl = ApiUrl;
             _settingsHelper.Settings.ReportPath = ReportPath;
-            _settingsHelper.Settings.ServicePrinterName = ServicePrinterName;
-            _settingsHelper.Settings.LabelPrinterName = LabelPrinterName;
 
             _settingsHelper.SaveSettingsToFile();
             await TryCloseAsync(true);
@@ -93,16 +58,6 @@ namespace PSMDesktopUI.ViewModels
             await TryCloseAsync(false);
         }
 
-        private bool ValidatePrinterName(string toValidate)
-        {
-            foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
-            {
-                if (toValidate == printer) return true;
-            }
-
-            return false;
-        }
-
         private void ReadSettingsFromFile()
         {
             _settingsHelper.ReadSettingsFromFile();
@@ -111,8 +66,6 @@ namespace PSMDesktopUI.ViewModels
             
             ApiUrl = settings.ApiUrl;
             ReportPath = settings.ReportPath;
-            ServicePrinterName = settings.ServicePrinterName;
-            LabelPrinterName = settings.LabelPrinterName;
         }
     }
 }

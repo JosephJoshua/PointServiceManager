@@ -10,7 +10,6 @@ namespace PSMDesktopUI.Views
     public partial class ServiceInvoicePreviewView : ThemedWindow
     {
         private ServiceInvoiceModel _invoiceModel;
-        private string _printerName;
 
         public ServiceInvoicePreviewView()
         {
@@ -18,11 +17,9 @@ namespace PSMDesktopUI.Views
             ReportViewer.Owner = GetWindow(this);
         }
 
-        public void SetInvoiceModel(ServiceInvoiceModel model, string reportPath, string printerName)
+        public void SetInvoiceModel(ServiceInvoiceModel model, string reportPath)
         {
             _invoiceModel = model;
-            _printerName = printerName;
-
             LoadReport(reportPath);
         }
 
@@ -32,17 +29,6 @@ namespace PSMDesktopUI.Views
             ReportDocument report = new ReportDocument();
 
             report.Load(reportPath);
-
-            try
-            {
-                report.PrintOptions.PrinterName = _printerName;
-            }
-            catch (COMException)
-            {
-                DXMessageBox.Show("Printer yang terdapat di settings tidak dapat ditemukan. Tolong atur ulang nama printer servisan.", "Print Servisan", 
-                    MessageBoxButton.OK);
-                Close();
-            }
 
             if (_invoiceModel.NoHp == null) _invoiceModel.NoHp = " ";
             if (_invoiceModel.Imei == null) _invoiceModel.Imei = " ";

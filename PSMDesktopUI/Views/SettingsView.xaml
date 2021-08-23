@@ -5,7 +5,6 @@
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
     xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
-    xmlns:printing="clr-namespace:System.Drawing.Printing;assembly=System.Drawing"
     Style="{StaticResource WindowStyle}"
     ShowInTaskbar="False"
     ShowIcon="False"
@@ -13,7 +12,7 @@
     ResizeMode="NoResize"
     WindowStartupLocation="CenterOwner"
     Title="Settings" 
-    Height="280" Width="525">
+    Height="200" Width="525">
 
     <Grid>
         <dxlc:LayoutControl Orientation="Vertical" dxe:ValidationService.IsValidationContainer="True">
@@ -26,22 +25,6 @@
                 <dxlc:LayoutItem Label="Report Path:" Margin="4">
                     <dxe:TextEdit x:Name="ReportPath" Margin="10 0 0 0" Height="30"
                                   Text="{Binding Path=ReportPath, UpdateSourceTrigger=PropertyChanged}" />
-                </dxlc:LayoutItem>
-
-                <dxlc:LayoutItem Label="Nama Printer Servisan:" Margin="4">
-                    <dxe:ComboBoxEdit Height="30" Margin="10 0 0 0"
-                                      AutoComplete="True"
-                                      IncrementalFiltering="True"
-                                      ItemsSource="{x:Static printing:PrinterSettings.InstalledPrinters}"
-                                      EditValue="{Binding ServicePrinterName, UpdateSourceTrigger=PropertyChanged}" />
-                </dxlc:LayoutItem>
-
-                <dxlc:LayoutItem Label="Nama Printer Label:" Margin="4">
-                    <dxe:ComboBoxEdit Height="30" Margin="10 0 0 0"
-                                      AutoComplete="True"
-                                      IncrementalFiltering="True"
-                                      ItemsSource="{x:Static printing:PrinterSettings.InstalledPrinters}"
-                                      EditValue="{Binding LabelPrinterName, UpdateSourceTrigger=PropertyChanged}" />
                 </dxlc:LayoutItem>
             </dxlc:LayoutGroup>
 
