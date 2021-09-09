@@ -51,7 +51,7 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
             <dxe:TextEdit Grid.Column="0" Grid.Row="0"
@@ -61,7 +61,7 @@
                           cal:Message.Attach="[Event KeyDown] = [Action Search($eventArgs)]"/>
 
             <dxe:ComboBoxEdit Grid.Column="1" Grid.Row="0"
-                              MinWidth="150"
+                              MinWidth="100"
                               ItemsSource="{Binding Path=SearchTypes, Converter={converters:EnumToCollectionConverter}, Mode=OneTime}"
                               ValueMember="Key"
                               DisplayMember="Value"
@@ -74,7 +74,7 @@
                        Margin="15 0 10 0" />
 
             <dxe:DateEdit Grid.Column="3" Grid.Row="0"
-                          MinWidth="150"
+                          MinWidth="140"
                           Height="30"
                           VerticalAlignment="Center"
                           MaskType="DateTime"
@@ -89,7 +89,7 @@
                        Margin="15 0 10 0" />
 
             <dxe:DateEdit Grid.Column="5" Grid.Row="0"
-                          MinWidth="150"
+                          MinWidth="140"
                           Height="30"
                           VerticalAlignment="Center"
                           MaskType="DateTime"
