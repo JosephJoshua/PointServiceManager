@@ -32,7 +32,9 @@ namespace PSMDesktopUI.ViewModels
             set
             {
                 _nama = value;
+
                 NotifyOfPropertyChange(() => Nama);
+                NotifyOfPropertyChange(() => CanAdd);
             }
         }
 
@@ -43,7 +45,9 @@ namespace PSMDesktopUI.ViewModels
             set
             {
                 _harga = value;
+
                 NotifyOfPropertyChange(() => Harga);
+                NotifyOfPropertyChange(() => CanAdd);
             }
         }
 
