@@ -53,7 +53,7 @@ namespace PSMDataManager.Controllers
                     NomorNota = model.NomorNota,
                     Nama = model.Nama,
                     Harga = model.Harga,
-                    TanggalPembelian = model.TanggalPengambilan,
+                    TanggalPembelian = model.TanggalPembelian,
                 });
 
                 return Ok();

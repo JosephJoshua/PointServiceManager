@@ -12,9 +12,9 @@ namespace PSMDataManager.Models
         public string Nama { get; set; }
 
         [Required]
-        public int Harga { get; set; }
+        public decimal Harga { get; set; }
 
         [Required]
-        public DateTime TanggalPengambilan { get; set; }
+        public DateTime TanggalPembelian { get; set; }
     }
 }

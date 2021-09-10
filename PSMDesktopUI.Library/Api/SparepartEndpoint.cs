@@ -53,6 +53,7 @@ namespace PSMDesktopUI.Library.Api
             {
                 if (!response.IsSuccessStatusCode)
                 {
+                    string err = await response.Content.ReadAsStringAsync();
                     throw await ApiException.FromHttpResponse(response);
                 }
             }
