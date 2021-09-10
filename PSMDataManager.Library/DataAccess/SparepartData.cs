@@ -26,7 +26,7 @@ namespace PSMDataManager.Library.DataAccess
         public void InsertSparepart(SparepartModel sparepart)
         {
             SqlDataAccess sql = new SqlDataAccess();
-            var p = (sparepart.NomorNota, sparepart.Nama, sparepart.Harga, sparepart.TanggalPembelian);
+            var p = new { sparepart.NomorNota, sparepart.Nama, sparepart.Harga, sparepart.TanggalPembelian };
 
             sql.SaveData<dynamic>("dbo.spInsertSparepart", p, "PSMData");
         }
